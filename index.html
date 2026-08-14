@@ -1,0 +1,2494 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>拍下来 · 会记得更久一些 — LIN.G 摄影作品集</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230a0908'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='34' fill='%23d9a75b' text-anchor='middle'%3EL.%3C/text%3E%3C/svg%3E">
+<meta name="description" content="LIN.G 摄影作品集：写真、Cosplay、街拍、风景、动物。用镜头留住光与情绪——拍下来，会记得更久一些。">
+<meta name="theme-color" content="#0a0908">
+<meta name="color-scheme" content="dark">
+<meta name="author" content="Lin.G">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="LIN.G Photography">
+<meta property="og:title" content="Lin.G — 拍下来·会记得更久一些">
+<meta property="og:description" content="LIN.G 摄影作品集：写真、Cosplay、街拍、风景、动物。用镜头留住光与情绪。">
+<meta property="og:image" content="assets/img/about-camera.jpg">
+<meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Noto+Serif+SC:wght@400;500;600&display=swap">
+<style>
+/* ============================================================
+   LIN.G — Editorial Black & Gold
+   高级审美重制版：编辑式排版 / 黑金配色 / 细腻动效
+   ============================================================ */
+:root{
+  --bg:#0a0908;
+  --bg2:#11100d;
+  --bg3:#181510;
+  --surface:rgba(241,235,224,.035);
+  --ink:#f1ebe0;
+  --muted:#a59b8b;
+  --dim:#6d6456;
+  --line:rgba(241,235,224,.10);
+  --line2:rgba(241,235,224,.18);
+  --gold:#d9a75b;
+  --gold2:#b2803c;
+  --gold-soft:rgba(217,167,91,.14);
+  --gold-grad:linear-gradient(115deg,#ecc287 0%,#d9a75b 45%,#a97c3a 100%);
+  --font-display:"Didot","Bodoni MT","Bodoni 72","Playfair Display","Cormorant Garamond",Georgia,"Times New Roman",serif;
+  --font-serif:"Songti SC","STSong","Noto Serif SC","Source Han Serif SC","SimSun",Georgia,serif;
+  --font-sans:"Helvetica Neue","PingFang SC","Hiragino Sans GB","Microsoft YaHei","Segoe UI",system-ui,sans-serif;
+  --ease:cubic-bezier(.19,1,.22,1);
+  --ease2:cubic-bezier(.65,.05,.36,1);
+  --nav-h:78px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:var(--font-sans);
+  line-height:1.75;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+::selection{background:var(--gold);color:#171310}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+:focus-visible{outline:1px solid var(--gold);outline-offset:3px}
+section[id]{scroll-margin-top:calc(var(--nav-h) + 8px)}
+.wrap{width:min(1320px,92vw);margin:0 auto}
+.sec-pad{padding:132px 0}
+.sec-eyebrow{
+  display:inline-flex;align-items:center;gap:14px;
+  font-family:var(--font-display);font-size:11px;letter-spacing:6px;
+  color:var(--gold);text-transform:uppercase;font-weight:400;
+}
+.sec-eyebrow::before{content:"";width:44px;height:1px;background:var(--gold)}
+.sec-title{
+  font-family:var(--font-serif);
+  font-size:clamp(34px,4.6vw,54px);
+  font-weight:500;letter-spacing:3px;line-height:1.3;
+  margin-top:16px;
+}
+.sec-sub{color:var(--muted);margin-top:14px;max-width:560px;font-size:15px;line-height:1.9}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:32px;margin-bottom:64px;flex-wrap:wrap}
+.sec-index{font-family:var(--font-display);font-size:12px;letter-spacing:4px;color:var(--dim);white-space:nowrap;padding-bottom:6px}
+.sec-index b{color:var(--gold);font-weight:400;margin-right:10px}
+/* ---------- 颗粒 ---------- */
+.grain{
+  position:fixed;inset:0;z-index:2000;pointer-events:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  opacity:.035;
+}
+/* ---------- 预加载 ---------- */
+#preloader{
+  position:fixed;inset:0;z-index:3000;background:var(--bg);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:24px;
+  transition:opacity .9s var(--ease),visibility .9s;
+}
+#preloader.done{opacity:0;visibility:hidden}
+#preloader .pl-logo{
+  font-family:var(--font-serif);font-size:40px;letter-spacing:18px;color:var(--ink);
+  display:flex;overflow:hidden;
+}
+#preloader .pl-logo span{display:inline-block;animation:plUp 1s var(--ease) both}
+#preloader .pl-logo em{font-style:normal;color:var(--gold);animation:plUp 1s var(--ease) both}
+#preloader .pl-logo span:nth-child(2){animation-delay:.07s}
+#preloader .pl-logo span:nth-child(3){animation-delay:.14s}
+#preloader .pl-logo span:nth-child(4){animation-delay:.21s}
+#preloader .pl-logo em{animation-delay:.28s}
+#preloader .pl-logo span:nth-child(6){animation-delay:.35s}
+@keyframes plUp{from{transform:translateY(115%);opacity:0}to{transform:translateY(0);opacity:1}}
+#preloader .pl-bar{width:170px;height:1px;background:var(--line);overflow:hidden;position:relative}
+#preloader .pl-bar i{position:absolute;inset:0;background:var(--gold);transform:scaleX(0);transform-origin:left;animation:plFill 1.5s var(--ease) .2s forwards}
+@keyframes plFill{to{transform:scaleX(1)}}
+#preloader .pl-tag{font-size:10px;letter-spacing:7px;color:var(--dim);text-transform:uppercase}
+/* ---------- 自定义光标 ---------- */
+.cursor-dot,.cursor-ring{position:fixed;top:0;left:0;z-index:4000;pointer-events:none;border-radius:50%}
+.cursor-dot{width:6px;height:6px;background:var(--gold);transform:translate(-50%,-50%)}
+.cursor-ring{
+  width:36px;height:36px;border:1px solid rgba(217,167,91,.5);
+  transform:translate(-50%,-50%);transition:width .35s,height .35s,border-color .35s,background .35s,opacity .35s;
+}
+body.cursor-on .cursor-ring{width:64px;height:64px;border-color:var(--gold);background:rgba(217,167,91,.08)}
+@media (pointer:coarse){.cursor-dot,.cursor-ring{display:none}}
+/* ---------- 顶部导航 ---------- */
+header{
+  position:fixed;top:0;left:0;right:0;z-index:1000;
+  transition:background .5s,backdrop-filter .5s,border-color .5s;
+  border-bottom:1px solid transparent;
+}
+header.scrolled{background:rgba(10,9,8,.78);backdrop-filter:blur(20px) saturate(140%);-webkit-backdrop-filter:blur(20px) saturate(140%);border-color:var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:var(--nav-h)}
+.brand{font-family:var(--font-serif);font-size:21px;letter-spacing:10px;color:var(--ink);display:inline-flex;align-items:baseline}
+.brand em{font-style:normal;color:var(--gold)}
+.nav-links{display:flex;align-items:center;gap:38px}
+.nav-links a{font-size:13px;letter-spacing:3px;color:var(--muted);position:relative;transition:color .3s;padding:8px 0}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:2px;width:0;height:1px;background:var(--gold);transition:width .4s var(--ease)}
+.nav-links a:hover{color:var(--ink)}
+.nav-links a:hover::after{width:100%}
+.nav-cta{
+  display:inline-flex;align-items:center;gap:8px;
+  border:1px solid var(--line2);padding:11px 24px;border-radius:999px;
+  font-size:12px;letter-spacing:3px;color:var(--ink);
+  transition:background .35s,color .35s,border-color .35s,box-shadow .35s;
+}
+.nav-cta:hover{background:var(--gold);border-color:var(--gold);color:#171310;box-shadow:0 8px 26px rgba(217,167,91,.28)}
+.burger{display:none;flex-direction:column;gap:5px;padding:10px}
+.burger i{width:24px;height:1.5px;background:var(--ink);transition:.35s var(--ease)}
+.burger.open i:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.burger.open i:nth-child(2){opacity:0}
+.burger.open i:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+.mobile-menu{
+  position:fixed;inset:0;z-index:900;background:rgba(10,9,8,.97);backdrop-filter:blur(24px);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:34px;
+  opacity:0;visibility:hidden;transition:.55s var(--ease);
+}
+.mobile-menu.open{opacity:1;visibility:visible}
+.mobile-menu a{font-family:var(--font-serif);font-size:30px;letter-spacing:8px;color:var(--ink);position:relative}
+.mobile-menu a:hover{color:var(--gold)}
+.mobile-menu .mm-tag{font-size:10px;letter-spacing:6px;color:var(--dim);text-transform:uppercase;margin-top:6px}
+/* ---------- Hero ---------- */
+.hero{
+  position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:center;
+  overflow:hidden;padding:170px 0 130px;
+}
+.hero-bg{
+  position:absolute;inset:0;z-index:0;will-change:transform;
+  background:
+    radial-gradient(60% 52% at 26% 30%, rgba(217,167,91,.24), transparent 70%),
+    radial-gradient(52% 60% at 74% 64%, rgba(178,128,60,.22), transparent 70%),
+    radial-gradient(130% 120% at 50% 42%, rgba(74,56,28,.34), transparent 62%),
+    #0c0a07;
+}
+.hero-bg canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+.hero-vignette{position:absolute;inset:0;background:radial-gradient(120% 95% at 50% 34%,transparent 30%,rgba(10,9,8,.78) 100%)}
+.hero-inner{position:relative;z-index:2;max-width:1060px}
+.hero-kicker{
+  display:inline-flex;align-items:center;gap:16px;
+  font-family:var(--font-display);font-size:11px;letter-spacing:7px;color:var(--gold);
+  text-transform:uppercase;opacity:0;animation:fadeUp 1s var(--ease) .25s forwards;
+}
+.hero-kicker::before{content:"";width:52px;height:1px;background:var(--gold)}
+.hero-name{
+  font-family:var(--font-serif);font-size:clamp(52px,9vw,124px);font-weight:500;
+  line-height:1.18;letter-spacing:5px;display:flex;flex-direction:column;gap:8px;margin-top:36px;
+}
+.hero-name .ln{display:block;overflow:hidden;padding-bottom:.08em}
+.hero-name .ln span{display:inline-block;transform:translateY(118%);animation:lnUp 1.3s var(--ease) forwards;will-change:transform}
+@keyframes lnUp{to{transform:translateY(0)}}
+.hero-name .ln.gold{color:#e6bd7c;position:relative}
+.hero-name .ln.gold::after{
+  content:"";position:absolute;top:-24%;bottom:-24%;left:-65%;width:42%;
+  transform:skewX(-20deg);pointer-events:none;
+  background:linear-gradient(90deg,transparent,rgba(255,246,224,.42),transparent);
+  animation:goldSweep 5.6s var(--ease) infinite;
+}
+@keyframes goldSweep{0%{left:-65%}58%,100%{left:135%}}
+.hero-glow{
+  position:absolute;left:0;top:0;width:56vmin;height:56vmin;margin:-28vmin 0 0 -28vmin;
+  border-radius:50%;pointer-events:none;z-index:1;
+  background:radial-gradient(circle,rgba(217,167,91,.22),rgba(217,167,91,.07) 42%,transparent 68%);
+  filter:blur(18px);mix-blend-mode:screen;opacity:0;transition:opacity 1.2s var(--ease) 1s;
+  will-change:transform;
+}
+.hero-glow.is-on{opacity:1}
+#dustCanvas{pointer-events:none}
+.hero-grain{
+  position:absolute;inset:-60px;pointer-events:none;z-index:3;opacity:.055;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.82' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  animation:grainShift 1.15s steps(4) infinite;
+}
+@keyframes grainShift{
+  0%{transform:translate(0,0)}25%{transform:translate(-14px,9px)}
+  50%{transform:translate(10px,-12px)}75%{transform:translate(-8px,-7px)}
+  100%{transform:translate(0,0)}
+}
+@media (prefers-reduced-motion: reduce){
+  .hero-grain{animation:none}
+  .hero-name .ln.gold::after{animation:none;opacity:0}
+}
+.hero-meta{display:flex;flex-wrap:wrap;gap:14px 30px;margin-top:46px;opacity:0;animation:fadeUp 1s var(--ease) .85s forwards}
+.hero-meta .hm{font-size:12px;letter-spacing:4px;color:var(--muted);display:inline-flex;align-items:center;gap:10px}
+.hero-meta .hm b{color:var(--ink);font-family:var(--font-display);font-weight:400;letter-spacing:3px;font-size:11px}
+.hero-tagline{margin-top:32px;max-width:640px;color:var(--muted);font-size:16px;line-height:2;opacity:0;animation:fadeUp 1s var(--ease) 1s forwards}
+.hero-cta{display:flex;gap:14px;margin-top:50px;flex-wrap:wrap;opacity:0;animation:fadeUp 1s var(--ease) 1.15s forwards}
+.btn{
+  display:inline-flex;align-items:center;gap:12px;
+  padding:17px 36px;border-radius:999px;font-size:13px;letter-spacing:4px;
+  transition:transform .5s var(--ease),background .4s,color .4s,border-color .4s,box-shadow .4s;
+}
+.btn .arr{transition:transform .4s var(--ease)}
+.btn:hover .arr{transform:translateX(4px)}
+.btn-primary{background:var(--gold);color:#171310}
+.btn-primary:hover{box-shadow:0 16px 44px rgba(217,167,91,.38);transform:translateY(-2px)}
+.btn-ghost{border:1px solid var(--line2);color:var(--ink)}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-2px)}
+@keyframes fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+.hero-foot{position:absolute;left:0;right:0;bottom:0;z-index:2;border-top:1px solid var(--line);padding:20px 0;opacity:0;animation:fadeUp 1s var(--ease) 1.35s forwards}
+.hero-foot .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.hero-scroll{display:flex;align-items:center;gap:14px;font-size:10px;letter-spacing:5px;text-transform:uppercase;color:var(--dim)}
+.hero-scroll i{width:64px;height:1px;position:relative;overflow:hidden;background:var(--line2)}
+.hero-scroll i::after{content:"";position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(90deg,transparent,var(--gold),transparent);animation:scrollSweep 2.4s var(--ease) infinite}
+@keyframes scrollSweep{0%{transform:translateX(-100%)}60%,100%{transform:translateX(100%)}}
+.hero-coord{font-family:var(--font-display);font-size:11px;letter-spacing:4px;color:var(--dim);font-variant-numeric:tabular-nums}
+/* ---------- 跑马灯 ---------- */
+.marquee{
+  border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  padding:30px 0;overflow:hidden;white-space:nowrap;position:relative;
+}
+.marquee::before,.marquee::after{content:"";position:absolute;top:0;bottom:0;width:120px;z-index:2;pointer-events:none}
+.marquee::before{left:0;background:linear-gradient(90deg,var(--bg),transparent)}
+.marquee::after{right:0;background:linear-gradient(-90deg,var(--bg),transparent)}
+.marquee-track{display:inline-flex;animation:marquee 30s linear infinite;will-change:transform}
+.marquee span{font-family:var(--font-serif);font-size:17px;letter-spacing:7px;color:var(--muted);display:inline-flex;align-items:center;white-space:nowrap}
+.marquee span::after{content:"✦";color:var(--gold);font-size:9px;margin:0 36px}
+@keyframes marquee{to{transform:translateX(-50%)}}
+/* ---------- 关于 ---------- */
+.about{position:relative}
+.about-grid{display:grid;grid-template-columns:minmax(340px,480px) 1fr;gap:88px;align-items:start}
+.about-photo{position:relative}
+.about-photo .frame{
+  position:relative;border-radius:3px;overflow:hidden;transform-style:preserve-3d;will-change:transform;
+  box-shadow:0 44px 96px rgba(0,0,0,.62);
+}
+.about-photo .frame::before{content:"";position:absolute;inset:0;z-index:2;border:1px solid rgba(241,235,224,.14);border-radius:3px;pointer-events:none}
+.about-photo .frame::after{content:"";position:absolute;inset:0;background:linear-gradient(165deg,rgba(10,9,8,0) 50%,rgba(10,9,8,.52));pointer-events:none}
+.about-photo .frame img{width:100%;height:auto;aspect-ratio:10/13;object-fit:cover;filter:saturate(.9) contrast(1.05)}
+.about-photo .ph-num{
+  position:absolute;right:-14px;top:-14px;z-index:3;
+  font-family:var(--font-display);font-size:11px;letter-spacing:3px;color:#171310;
+  background:var(--gold);padding:9px 14px;border-radius:2px;
+}
+.about-photo .ph-cap{
+  position:absolute;left:20px;bottom:20px;z-index:3;font-size:10px;letter-spacing:4px;
+  color:rgba(241,235,224,.82);display:flex;align-items:center;gap:12px;
+}
+.about-photo .ph-cap::before{content:"";width:28px;height:1px;background:var(--gold)}
+.about-photo .ph-cap em{font-style:normal;color:var(--gold)}
+.about-bio .lead{
+  font-family:var(--font-serif);font-size:clamp(21px,2.5vw,28px);line-height:1.7;color:var(--ink);
+  font-weight:500;letter-spacing:1px;
+}
+.about-bio .lead b{color:var(--gold);font-weight:500}
+.about-bio p{color:var(--muted);margin-top:22px;font-size:15px;line-height:2}
+.stats{display:grid;grid-template-columns:repeat(3,auto);gap:52px;margin-top:54px;padding-top:42px;border-top:1px solid var(--line)}
+.stat b{font-family:var(--font-display);font-size:clamp(32px,3.4vw,48px);font-weight:400;color:var(--ink);display:flex;align-items:baseline;line-height:1;letter-spacing:1px}
+.stat b i{font-style:normal;color:var(--gold);font-size:.65em;margin-left:3px}
+.stat span{font-size:11px;letter-spacing:4px;color:var(--dim);margin-top:12px;display:block}
+.signature{
+  margin-top:42px;font-family:var(--font-serif);font-size:24px;letter-spacing:5px;color:var(--gold);opacity:.92;
+}
+/* ---------- Shadow page ---------- */
+.shadow-sec{position:relative;height:100vh;min-height:560px;overflow:hidden;background:#0a0908;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.pit{position:absolute;inset:0;display:block;width:100%;height:100%}
+.shadow-vig{position:absolute;inset:0;pointer-events:none;z-index:1;background:radial-gradient(120% 90% at 50% 45%,transparent 52%,rgba(6,5,4,.82) 100%)}
+.shadow-stage{position:relative;z-index:2;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px;pointer-events:none}
+.shadow-eyebrow{font-family:var(--font-display);font-size:10px;letter-spacing:9px;color:var(--gold);text-transform:uppercase;margin-bottom:26px;opacity:0;animation:shadowFade 1.2s .3s forwards}
+.shadow-h1{font-family:var(--font-serif);font-weight:500;font-size:clamp(46px,9vw,96px);letter-spacing:14px;line-height:1.2;text-shadow:0 0 60px rgba(217,167,91,.25);opacity:0;animation:shadowFade 1.2s .5s forwards}
+.shadow-h2{font-family:var(--font-serif);font-weight:500;color:var(--gold);font-size:clamp(30px,6vw,60px);letter-spacing:18px;margin-top:16px;opacity:0;animation:shadowFade 1.2s .75s forwards}
+.shadow-line{width:72px;height:1px;margin:32px 0;background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:0;animation:shadowFade 1.2s .95s forwards}
+.shadow-sub{font-family:var(--font-display);font-size:11px;letter-spacing:5px;color:var(--muted);opacity:0;animation:shadowFade 1.2s 1.15s forwards}
+@keyframes shadowFade{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+/* ---------- 作品 ---------- */
+.works-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:30px;margin-bottom:52px}
+.filters{display:flex;gap:8px;flex-wrap:wrap}
+.filters button{
+  padding:11px 24px;border-radius:999px;border:1px solid var(--line);
+  font-size:12px;letter-spacing:3px;color:var(--muted);background:transparent;
+  transition:.35s var(--ease);position:relative;
+}
+.filters button small{font-family:var(--font-display);font-size:10px;opacity:.55;margin-left:6px}
+.filters button:hover{color:var(--ink);border-color:var(--line2)}
+.filters button.active{background:var(--gold);border-color:var(--gold);color:#171310}
+.wall-stage{
+  position:relative;overflow:hidden;border-radius:4px;background:#050404;border:1px solid var(--line);
+  perspective:var(--wall-persp,1200px);perspective-origin:50% 42%;
+  height:var(--wall-h,620px);
+}
+.wall-scene{position:absolute;left:50%;top:46%;width:0;height:0;transform-style:preserve-3d;will-change:transform}
+.wall-mover{position:absolute;left:0;top:0;transform-style:preserve-3d;will-change:transform}
+.wtile{position:absolute;left:0;top:0;transform-style:preserve-3d}
+.wtile-btn{
+  position:relative;display:block;width:var(--tw,200px);height:var(--th,132px);
+  border:none;padding:0;border-radius:3px;overflow:hidden;cursor:pointer;
+  background:var(--bg2);box-shadow:0 18px 44px rgba(0,0,0,.66);
+  transform:translateZ(0);transition:transform .55s var(--ease),box-shadow .55s var(--ease);
+}
+.wtile-btn::after{content:"";position:absolute;inset:0;z-index:2;border:1px solid rgba(241,235,224,.14);border-radius:3px;pointer-events:none}
+.wtile-btn img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 1.1s var(--ease),filter .6s;filter:saturate(.92)}
+.wtile-btn:hover img{transform:scale(1.07)}
+.wtile-btn .wt-tag{
+  position:absolute;left:10px;bottom:10px;z-index:3;font-size:9px;letter-spacing:3px;
+  color:rgba(241,235,224,.94);background:rgba(10,9,8,.62);border:1px solid rgba(217,167,91,.5);
+  padding:4px 10px;border-radius:999px;backdrop-filter:blur(6px);
+  opacity:0;transform:translateY(6px);transition:.35s;
+}
+.wtile-btn:hover .wt-tag{opacity:1;transform:translateY(0)}
+.wtile-btn .wt-plus{
+  position:absolute;top:10px;right:10px;z-index:3;width:26px;height:26px;border-radius:50%;
+  background:rgba(10,9,8,.55);border:1px solid rgba(217,167,91,.55);color:var(--gold);font-size:14px;
+  display:grid;place-items:center;opacity:0;transition:.35s;
+}
+.wtile-btn:hover .wt-plus{opacity:1}
+@media (hover:hover) and (pointer:fine){
+  .wtile-btn:hover{transform:translateZ(var(--wall-lift,76px))}
+}
+.wall-overlay{
+  position:absolute;inset:0;pointer-events:none;z-index:4;
+  background:radial-gradient(120% 95% at 50% 44%,transparent 50%,rgba(0,0,0,var(--wall-dim,.5)) 100%);
+}
+.wall-fade{position:absolute;left:0;right:0;height:16%;pointer-events:none;z-index:5}
+.wall-fade.top{top:0;background:linear-gradient(180deg,#050404 10%,transparent)}
+.wall-fade.bot{bottom:0;background:linear-gradient(0deg,#050404 10%,transparent)}
+.wall-empty{position:absolute;inset:0;display:grid;place-items:center;color:var(--muted);font-size:14px;letter-spacing:3px;z-index:6;background:#050404}
+/* 经典网格（分类筛选） */
+.works{columns:3 260px;column-gap:24px}
+.work{
+  break-inside:avoid;margin-bottom:24px;position:relative;border-radius:3px;overflow:hidden;
+  background:var(--bg2);animation:workIn .8s var(--ease) both;
+}
+@keyframes workIn{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:translateY(0)}}
+.work-media{position:relative;cursor:pointer;overflow:hidden}
+.work-media img{width:100%;height:auto;aspect-ratio:var(--ar,3/4);object-fit:cover;transition:transform 1.2s var(--ease),filter .6s;filter:saturate(.94)}
+.work:hover .work-media img{transform:scale(1.06)}
+.work-shade{
+  position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,9,8,0) 42%,rgba(10,9,8,.84));
+  opacity:0;transition:opacity .5s;display:flex;flex-direction:column;justify-content:flex-end;padding:24px;
+}
+.work:hover .work-shade{opacity:1}
+.work-cat{font-family:var(--font-display);font-size:10px;letter-spacing:5px;color:var(--gold);text-transform:uppercase}
+.work-title{font-family:var(--font-serif);font-size:22px;letter-spacing:2px;margin-top:8px;transform:translateY(14px);transition:transform .55s var(--ease)}
+.work-sub{font-size:12px;color:var(--muted);letter-spacing:1px;margin-top:4px;transform:translateY(14px);transition:transform .55s var(--ease) .05s}
+.work:hover .work-title,.work:hover .work-sub{transform:translateY(0)}
+.work-plus{
+  position:absolute;top:16px;right:16px;width:40px;height:40px;border-radius:50%;
+  border:1px solid rgba(241,235,224,.55);display:grid;place-items:center;font-size:18px;color:#fff;
+  opacity:0;transform:scale(.6) rotate(-45deg);transition:.45s var(--ease);background:rgba(10,9,8,.32);
+}
+.work:hover .work-plus{opacity:1;transform:scale(1) rotate(0)}
+/* ---------- 联系 ---------- */
+.contact{position:relative;overflow:hidden;border-top:1px solid var(--line)}
+.contact::before{
+  content:"";position:absolute;left:50%;top:-32%;transform:translateX(-50%);
+  width:64vw;height:64vw;border-radius:50%;
+  background:radial-gradient(circle,rgba(217,167,91,.10),transparent 62%);pointer-events:none;
+}
+.contact-inner{position:relative;text-align:center}
+.contact-big{
+  font-family:var(--font-serif);font-size:clamp(36px,6vw,76px);font-weight:500;
+  letter-spacing:4px;line-height:1.3;
+}
+.contact-big em{
+  font-style:normal;background:var(--gold-grad);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.contact-lines{margin-top:50px;display:flex;flex-direction:column;gap:22px;align-items:center}
+.cl{font-size:15px;letter-spacing:2px;color:var(--muted);display:flex;align-items:center;gap:16px}
+.cl::before{content:"";width:22px;height:1px;background:var(--line2)}
+.cl b{color:var(--ink);font-weight:500}
+.cl a{color:var(--gold);border-bottom:1px solid rgba(217,167,91,.4);transition:border-color .3s;padding-bottom:2px}
+.cl a:hover{border-color:var(--gold)}
+.contact-cta{margin-top:48px}
+.socials{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-top:48px}
+.socials a{
+  border:1px solid var(--line);padding:12px 26px;border-radius:999px;
+  font-size:12px;letter-spacing:4px;color:var(--muted);transition:.35s;
+}
+.socials a:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-2px)}
+/* ---------- 页脚 ---------- */
+footer{border-top:1px solid var(--line);padding:46px 0}
+.foot{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:18px}
+.foot .mono{font-family:var(--font-serif);letter-spacing:8px;font-size:18px}
+.foot .mono em{font-style:normal;color:var(--gold)}
+.foot p{font-size:11px;letter-spacing:3px;color:var(--dim)}
+.foot .top{display:inline-flex;align-items:center;gap:10px;font-size:11px;letter-spacing:3px;color:var(--dim);transition:color .3s}
+.foot .top:hover{color:var(--gold)}
+/* ---------- 灯箱 ---------- */
+#lightbox{
+  position:fixed;inset:0;z-index:2500;background:rgba(8,7,6,.95);backdrop-filter:blur(18px);
+  display:flex;align-items:center;justify-content:center;flex-direction:column;gap:24px;
+  opacity:0;visibility:hidden;transition:.5s var(--ease);
+}
+#lightbox.open{opacity:1;visibility:visible}
+#lightbox img{
+  max-width:min(90vw,1080px);max-height:72vh;object-fit:contain;
+  box-shadow:0 44px 120px rgba(0,0,0,.68);border-radius:4px;
+  transform:scale(.96);transition:transform .55s var(--ease);
+}
+#lightbox.open img{transform:scale(1)}
+.lb-info{text-align:center;display:flex;flex-direction:column;gap:6px}
+.lb-info .lb-cat{font-family:var(--font-display);font-size:10px;letter-spacing:7px;color:var(--gold);text-transform:uppercase}
+.lb-info h3{font-family:var(--font-serif);font-size:26px;letter-spacing:3px;font-weight:500}
+.lb-count{font-family:var(--font-display);font-size:11px;letter-spacing:4px;color:var(--dim)}
+.lb-btn{
+  position:absolute;top:50%;transform:translateY(-50%);
+  width:56px;height:56px;border-radius:50%;border:1px solid var(--line2);
+  display:grid;place-items:center;font-size:22px;color:var(--ink);
+  transition:.35s;z-index:2;background:rgba(10,9,8,.42);
+}
+.lb-btn:hover{background:var(--gold);color:#171310;border-color:var(--gold)}
+.lb-prev{left:26px}.lb-next{right:26px}
+.lb-close{position:absolute;top:26px;right:26px;width:48px;height:48px;border-radius:50%;border:1px solid var(--line2);display:grid;place-items:center;font-size:17px;color:var(--ink);transition:.35s;z-index:2;background:rgba(10,9,8,.42)}
+.lb-close:hover{background:#fff;color:#171310;border-color:#fff}
+/* ---------- 图片载入淡入 ---------- */
+.work-media img,.wtile-btn img{animation:imgIn .75s var(--ease) both}
+@keyframes imgIn{from{opacity:0}to{opacity:1}}
+/* 选择器微调 */
+.filters button{backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.work-media{background:linear-gradient(160deg,var(--bg3),var(--bg2))}
+.work-media img{background:var(--bg2)}
+@media (prefers-reduced-motion:reduce){.work-media img,.wtile-btn img{animation:none}}
+
+/* ---------- 滚动显现 ---------- */
+.reveal{opacity:0;transform:translateY(42px);transition:opacity 1.05s var(--ease),transform 1.05s var(--ease)}
+.reveal.in{opacity:1;transform:translateY(0)}
+.reveal.d1{transition-delay:.1s}.reveal.d2{transition-delay:.2s}.reveal.d3{transition-delay:.3s}
+/* ---------- 滚动进度 ---------- */
+#scrollbar{position:fixed;top:0;left:0;height:2px;background:var(--gold-grad);z-index:1500;width:0;box-shadow:0 0 12px rgba(217,167,91,.5)}
+/* ---------- 响应式 ---------- */
+/* ---------- Sidebar (desktop) · transparent editorial rail ---------- */
+:root{--sidebar-w:280px}
+#sidebar{
+  position:fixed;top:0;left:0;bottom:0;width:var(--sidebar-w);z-index:1200;
+  background:transparent;
+  border-right:1px solid var(--line);
+  display:flex;flex-direction:column;
+  padding:48px 44px 26px;
+  transition:transform .6s var(--ease);
+  will-change:transform;
+}
+#sidebar::before{
+  content:"";position:absolute;top:0;left:0;width:64px;height:1px;background:var(--gold);pointer-events:none;
+}
+.sb-progress{
+  position:absolute;right:0;top:0;bottom:0;width:1px;z-index:0;pointer-events:none;
+  background:var(--line);overflow:hidden;
+}
+.sb-progress i{
+  position:absolute;top:0;left:0;width:100%;height:0;
+  background:var(--gold);box-shadow:0 0 10px rgba(217,167,91,.5);
+}
+.sb-inner{position:relative;z-index:1;display:flex;flex-direction:column;height:100%}
+/* brand */
+.sb-brand{display:flex;flex-direction:column;gap:12px;animation:sbUp .8s var(--ease) both}
+.sb-brand b{font-family:var(--font-serif);font-size:26px;letter-spacing:10px;font-weight:500;color:var(--ink);line-height:1}
+.sb-brand b em{font-style:normal;color:var(--gold)}
+.sb-brand span{font-family:var(--font-display);font-size:9px;letter-spacing:4px;color:var(--dim);text-transform:uppercase}
+/* nav */
+.sb-nav{display:flex;flex-direction:column;margin-top:48px}
+.sb-link{
+  position:relative;display:flex;align-items:center;gap:18px;
+  padding:16px 4px;border-bottom:1px solid var(--line);
+  transition:color .35s;animation:sbUp .8s var(--ease) both;
+}
+.sb-link:first-child{border-top:1px solid var(--line)}
+.sb-link i{font-family:var(--font-display);font-size:11px;color:var(--dim);font-style:normal;width:28px;transition:color .35s}
+.sb-link .tx{display:flex;flex-direction:column;gap:3px}
+.sb-link .cn{font-family:var(--font-serif);font-size:20px;letter-spacing:6px;color:#d2c9b8;transition:color .35s,transform .45s var(--ease)}
+.sb-link .en{font-family:var(--font-display);font-size:9px;letter-spacing:4px;color:var(--dim);text-transform:uppercase;transition:color .35s}
+.sb-link::after{
+  content:"";position:absolute;left:-44px;top:50%;width:2px;height:36px;
+  background:var(--gold);transform:translateY(-50%) scaleY(0);transform-origin:center;
+  transition:transform .45s var(--ease);border-radius:2px;
+}
+.sb-link:hover .cn{color:var(--ink);transform:translateX(4px)}
+.sb-link:hover i{color:var(--gold)}
+.sb-link.active .cn{color:var(--gold)}
+.sb-link.active i{color:var(--gold)}
+.sb-link.active .en{color:var(--muted)}
+.sb-link.active::after{transform:translateY(-50%) scaleY(1)}
+.sb-link:nth-child(1){animation-delay:.05s}
+.sb-link:nth-child(2){animation-delay:.1s}
+.sb-link:nth-child(3){animation-delay:.15s}
+.sb-link:nth-child(4){animation-delay:.2s}
+/* footer */
+.sb-foot{margin-top:auto;display:flex;flex-direction:column;gap:18px;animation:sbUp .8s var(--ease) .3s both}
+.sb-sub{display:flex;flex-direction:column;gap:10px;padding-top:20px;border-top:1px solid var(--line)}
+.sb-sub a{display:flex;align-items:center;justify-content:space-between;gap:8px;font-size:13px;letter-spacing:3px;color:var(--muted);transition:color .3s}
+.sb-sub a span{color:var(--gold);font-size:12px;opacity:0;transform:translate(-4px,4px);transition:.35s var(--ease)}
+.sb-sub a:hover{color:var(--gold)}
+.sb-sub a:hover span{opacity:1;transform:translate(0,0)}
+.sb-photo{display:flex;flex-direction:column;gap:12px;animation:sbUp .8s var(--ease) .32s both}
+.sb-photo figure{position:relative;overflow:hidden;border:1px solid var(--line)}
+.sb-photo img{width:100%;height:106px;object-fit:cover;filter:grayscale(1) contrast(1.06) brightness(.82);opacity:.78;transition:filter .6s,opacity .6s}
+.sb-photo:hover img{filter:grayscale(.2) contrast(1.06) brightness(.9);opacity:1}
+.sb-photo span{font-family:var(--font-display);font-size:9px;letter-spacing:4px;color:var(--dim);text-transform:uppercase}
+.sb-cta{
+  display:inline-flex;align-items:center;gap:12px;width:fit-content;
+  font-family:var(--font-serif);font-size:15px;letter-spacing:6px;color:var(--gold);
+  padding-bottom:8px;position:relative;
+}
+.sb-cta::after{content:"";position:absolute;left:0;bottom:0;width:100%;height:1px;background:var(--gold);transition:transform .45s var(--ease);transform-origin:left}
+.sb-cta span{transition:transform .35s var(--ease)}
+.sb-cta:hover::after{transform:scaleX(.4)}
+.sb-cta:hover span{transform:translateX(4px)}
+.sb-meta{display:flex;flex-direction:column;gap:6px}
+.sb-meta p{font-family:var(--font-display);font-size:9px;letter-spacing:3px;color:var(--dim);font-variant-numeric:tabular-nums}
+@keyframes sbUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+@media (min-height:1px) and (max-height:840px){
+  #sidebar{padding-top:36px;padding-bottom:26px}
+  .sb-nav{margin-top:30px}
+  .sb-link{padding:12px 4px}
+  .sb-photo{display:none}
+  .sb-foot{gap:14px}
+  .sb-sub{padding-top:14px}
+}
+@media (min-width:961px){
+  body{padding-left:var(--sidebar-w)}
+  .wrap{width:min(1220px, calc(94vw - var(--sidebar-w)))}
+  header{display:none}
+}
+@media (max-width:960px){
+  #sidebar{display:none}
+}
+/* Sidebar toggle */
+.sidebar-toggle{
+  position:fixed;top:50%;left:var(--sidebar-w);transform:translate(-50%,-50%);
+  z-index:1250;width:34px;height:48px;border-radius:0 9px 9px 0;
+  display:flex;align-items:center;justify-content:center;cursor:pointer;
+  background:rgba(12,10,7,.72);border:1px solid var(--line2);border-left:none;
+  color:var(--muted);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+  transition:left .6s var(--ease),color .3s,background .3s,border-color .3s,box-shadow .3s;
+}
+.sidebar-toggle:hover{color:var(--gold);border-color:var(--gold);background:rgba(22,17,10,.9);box-shadow:0 0 18px rgba(217,167,91,.25)}
+.sidebar-toggle .st-ico{position:relative;width:10px;height:14px;display:block;transition:transform .5s var(--ease)}
+.sidebar-toggle .st-ico i{position:absolute;left:0;width:10px;height:1.5px;background:currentColor;transition:transform .35s var(--ease)}
+.sidebar-toggle .st-ico i:first-child{top:2px;transform:rotate(45deg);transform-origin:0 50%}
+.sidebar-toggle .st-ico i:last-child{bottom:2px;transform:rotate(-45deg);transform-origin:0 50%}
+@media (min-width:961px){
+  body.sidebar-closed{padding-left:0}
+  body.sidebar-closed .wrap{width:min(1220px,94vw)}
+  body.sidebar-closed #sidebar{transform:translateX(-100%)}
+  body.sidebar-closed .sidebar-toggle{left:0;border-left:1px solid var(--line2);border-radius:0 9px 9px 0}
+  body.sidebar-closed .sidebar-toggle .st-ico{transform:rotate(180deg)}
+}
+@media (max-width:960px){.sidebar-toggle{display:none}}
+@media (max-width:960px){
+  .about-grid{grid-template-columns:1fr;gap:64px}
+  .nav-links,.nav-cta{display:none}
+  .burger{display:flex}
+  .stats{grid-template-columns:repeat(3,1fr);gap:28px}
+}
+@media (max-width:600px){
+  .sec-pad{padding:84px 0}
+  .hero{padding:150px 0 120px}
+  .hero-name{letter-spacing:2px}
+  .hero-meta{gap:10px 18px}
+  .stats{grid-template-columns:repeat(3,1fr);gap:16px}
+  .stat span{letter-spacing:2px}
+  .lb-btn{width:44px;height:44px}
+  .lb-prev{left:10px}.lb-next{right:10px}
+  .marquee::before,.marquee::after{width:40px}
+  .shadow-h1{letter-spacing:6px}.shadow-h2{letter-spacing:8px}
+  .works{columns:2 140px;column-gap:14px}
+  .work{margin-bottom:14px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+  html{scroll-behavior:auto}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+<style>
+/* ============ Ring Hero (K95-style WebGL cylinder) ============ */
+#ringCanvas{opacity:0;transition:opacity 1.1s var(--ease);z-index:0}
+#ringCanvas.is-on{opacity:1}
+.hero-fallback{display:none;position:absolute;inset:0;z-index:0;overflow:hidden;background:#0c0a07}
+.hero-fallback.show{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:1fr}
+.hero-fallback img{width:100%;height:100%;object-fit:cover;opacity:.5;filter:saturate(.82) contrast(1.06) brightness(.9)}
+.hero-fallback::after{content:"";position:absolute;inset:0;background:radial-gradient(120% 95% at 50% 34%,transparent 32%,rgba(10,9,8,.82) 100%)}
+.hero-vignette{pointer-events:none}
+.hero-inner{pointer-events:none}
+.hero-inner .hero-cta,.hero-inner a{pointer-events:auto}
+.hero-name{text-shadow:0 2px 26px rgba(10,9,8,.85),0 0 90px rgba(10,9,8,.65)}
+.hero-tagline{text-shadow:0 1px 20px rgba(10,9,8,.75)}
+.hero-kicker,.hero-meta{text-shadow:0 1px 14px rgba(10,9,8,.72)}
+.hero-inner::before{
+  content:"";position:absolute;inset:-64px -150px;z-index:-1;pointer-events:none;
+  background:radial-gradient(54% 58% at 50% 46%, rgba(10,9,8,.52), rgba(10,9,8,.24) 58%, transparent 78%);
+}
+.hero-foot{pointer-events:none}
+/* layout switch pill (K95 style) */
+.layout-switch{
+  position:fixed;top:26px;left:50%;transform:translateX(-50%);z-index:1300;
+  display:inline-flex;align-items:center;gap:4px;padding:5px;border-radius:999px;
+  background:rgba(12,10,7,.55);border:1px solid rgba(241,235,224,.16);
+  -webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);
+  opacity:0;pointer-events:none;transition:opacity .6s var(--ease) .3s;
+}
+.layout-switch.is-on{opacity:1;pointer-events:auto}
+.layout-switch__pill{
+  position:absolute;top:5px;bottom:5px;left:5px;width:calc(50% - 7px);
+  background:rgba(241,235,224,.09);border-radius:999px;
+  transition:transform .42s cubic-bezier(.22,1,.36,1);
+}
+.layout-switch.is-spiral .layout-switch__pill{transform:translateX(calc(100% + 4px))}
+.layout-switch__btn{
+  position:relative;z-index:1;padding:11px 18px;border-radius:999px;
+  font-size:11px;letter-spacing:3px;text-transform:uppercase;color:rgba(241,235,224,.5);
+  transition:color .25s ease;
+}
+.layout-switch__btn.is-active{color:var(--ink)}
+.layout-switch__btn:hover{color:var(--gold)}
+@media (max-width:960px){
+  .layout-switch{top:auto;bottom:94px;left:50%;transform:translateX(-50%)}
+  .hero-inner::before{inset:-40px -70px}
+}
+</style>
+</head><body>
+<!-- 预加载 -->
+<div id="preloader">
+  <div class="pl-logo"><span>L</span><span>i</span><span>n</span><span>.</span><em>G</em></div>
+  <div class="pl-bar"><i></i></div>
+  <div class="pl-tag">Shoot it &middot; Remember it longer</div>
+</div>
+<!-- 颗粒与滚动进度 -->
+<div class="grain"></div>
+<div id="scrollbar"></div>
+<!-- 自定义光标 -->
+<div class="cursor-dot"></div>
+<div class="cursor-ring"></div>
+<!-- 导航 -->
+<header id="header">
+  <div class="wrap nav">
+    <a class="brand" href="#home">Lin.G<em>.</em></a>
+    <nav class="nav-links">
+      <a href="#home">首页</a>
+      <a href="#about">关于</a>
+      <a href="#works">作品</a>
+      <a href="#contact">联系</a>
+      <a href="moment.html">Own the moment</a>
+    </nav>
+    <a class="nav-cta" href="#contact">约拍档期</a>
+    <button class="burger" id="burger" aria-label="菜单"><i></i><i></i><i></i></button>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#home">首页</a>
+  <a href="#about">关于</a>
+  <a href="#works">作品</a>
+  <a href="#contact">联系</a>
+  <a href="moment.html">Own the moment</a>
+  <div class="mm-tag">Shoot it &middot; Remember it longer</div>
+</div>
+<!-- Hero：LaserFlow 激光流光 -->
+<!-- Sidebar (desktop) -->
+<aside id="sidebar" aria-label="side navigation">
+  <div class="sb-progress" aria-hidden="true"><i id="sbProg"></i></div>
+  <div class="sb-inner">
+    <a class="sb-brand" href="#home">
+      <b>Lin.G<em>.</em></b>
+      <span>Shoot it &middot; Remember it longer</span>
+    </a>
+    <nav class="sb-nav">
+      <a class="sb-link active" href="#home"><i>01</i><span class="tx"><b class="cn">&#39318;&#39029;</b><em class="en">Home</em></span></a>
+      <a class="sb-link" href="#about"><i>02</i><span class="tx"><b class="cn">&#20851;&#20110;</b><em class="en">About</em></span></a>
+      <a class="sb-link" href="#works"><i>03</i><span class="tx"><b class="cn">&#20316;&#21697;</b><em class="en">Works</em></span></a>
+      <a class="sb-link" href="#contact"><i>04</i><span class="tx"><b class="cn">&#32852;&#31995;</b><em class="en">Contact</em></span></a>
+    </nav>
+    <div class="sb-foot">
+      <div class="sb-sub">
+        <a href="moment.html">Own the moment<span>&#8599;</span></a>
+      </div>
+            <div class="sb-photo">
+        <figure><img src="assets/img/about-camera.jpg" alt="Lin.G &#24037;&#20316;&#29031;" loading="lazy"></figure>
+        <span>Lin.G &mdash; Photographer</span>
+      </div>
+<a class="sb-cta" href="mailto:2986550481@qq.com">&#32422;&#25293;&#25377;&#26399;<span>&#8594;</span></a>
+      <div class="sb-meta">
+        <p>31.2304&deg; N &middot; 121.4737&deg; E</p>
+        <p>&copy; 2026 LIN.G</p>
+      </div>
+    </div>
+  </div>
+</aside>
+<!-- Sidebar toggle -->
+<button class="sidebar-toggle" id="sidebarToggle" aria-label="切换侧边栏" aria-expanded="true" title="收起 / 展开侧边栏">
+  <span class="st-ico" aria-hidden="true"><i></i><i></i></span>
+</button>
+<section class="hero" id="home">
+  <div class="hero-bg" id="heroBg">
+    <canvas id="ringCanvas" aria-hidden="true"></canvas>
+    <canvas id="laserCanvas" aria-hidden="true"></canvas>
+    <canvas id="dustCanvas" aria-hidden="true"></canvas>
+    <div class="hero-fallback" id="heroFallback" aria-hidden="true"></div>
+  </div>
+  <div class="hero-vignette"></div>
+  <div class="hero-glow" id="heroGlow" aria-hidden="true"></div>
+  <div class="hero-grain" aria-hidden="true"></div>
+  <div class="layout-switch" id="layoutSwitch" role="group" aria-label="首屏布局切换">
+    <span class="layout-switch__pill" aria-hidden="true"></span>
+    <button type="button" class="layout-switch__btn is-active" data-mode="rings" aria-pressed="true">Rings</button>
+    <button type="button" class="layout-switch__btn" data-mode="spiral" aria-pressed="false">Spiral</button>
+  </div>
+  <div class="wrap hero-inner">
+    <div class="hero-kicker">Shoot It &mdash; Remember It Longer</div>
+    <h1 class="hero-name" aria-label="拍下来 记得更久一些">
+      <span class="ln"><span>拍</span><span>下</span><span>来</span></span>
+      <span class="ln gold"><span>记</span><span>得</span><span>更</span><span>久</span><span>一</span><span>些</span></span>
+    </h1>
+    <div class="hero-meta">
+      <span class="hm">写真 <b>PORTRAIT</b></span>
+      <span class="hm">Cosplay <b>COS</b></span>
+      <span class="hm">街拍 <b>STREET</b></span>
+      <span class="hm">风景 <b>LANDSCAPE</b></span>
+      <span class="hm">动物 <b>ANIMAL</b></span>
+    </div>
+    <p class="hero-tagline">影像会替你记得&mdash;&mdash;每一次快门，都是把瞬间变成永恒。专注写真、Cosplay 与街拍，为每一帧注入情绪与光。</p>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="#works">查看作品<span class="arr">&#8594;</span></a>
+      <a class="btn btn-ghost" href="#about">关于我</a>
+    </div>
+  </div>
+  <div class="hero-foot">
+    <div class="wrap">
+      <div class="hero-scroll">Scroll<i></i></div>
+      <div class="hero-coord">31.2304&deg; N &middot; 121.4737&deg; E &mdash; EST. 2026</div>
+    </div>
+  </div>
+</section>
+<!-- 跑马灯 -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track" id="marqueeTrack">
+    <span>写真</span><span>PORTRAIT</span><span>Cosplay</span><span>街拍</span><span>STREET</span>
+    <span>风景</span><span>LANDSCAPE</span><span>动物</span><span>ANIMAL</span>
+    <span>情绪光影</span><span>高级感影像</span><span>SHOOT IT LONGER</span>
+  </div>
+</div>
+<!-- 关于 -->
+<section class="sec-pad about" id="about">
+  <div class="wrap about-grid">
+    <div class="about-photo reveal">
+      <div class="frame" id="aboutFrame">
+        <img id="aboutImg" src="assets/img/about-camera.jpg" alt="摄影师工作照"
+             data-pal="about" data-num="01" data-w="1000" data-h="1300" onerror="phFallback(this)">
+      </div>
+      <span class="ph-num">FIG. 01</span>
+      <span class="ph-cap"><em>Lin.G</em>&nbsp;·&nbsp;光影之间</span>
+    </div>
+    <div class="about-bio">
+      <div class="sec-eyebrow reveal">About / 关于我</div>
+      <h2 class="sec-title reveal d1">你好，我是 Lin.G</h2>
+      <p class="lead reveal d2">一位热衷于捕捉<b>情绪与故事</b>的摄影爱好者，在<b>写真、Cosplay 与街拍</b>之间自由穿行。相信好照片不只是按下快门，更是一次与光、与人的真诚对话。</p>
+      <p class="reveal d2">从城市街头的人海，到棚内精心营造的光影，我始终追求「自然、有温度、有记忆点」的影像语言。擅长利用环境光与氛围感，让人物在镜头前呈现最松弛、最真实的自己。</p>
+      <p class="reveal d2">无论你是想拍一组情绪写真、还原一个心爱的角色，还是想要一组有电影感的街拍，我都乐于与你一起完成这场创作。</p>
+      <div class="stats">
+        <div class="stat reveal"><b><span class="count" data-count="300">0</span><i>+</i></b><span>快门作品</span></div>
+        <div class="stat reveal d1"><b>05</b><span>类题材</span></div>
+        <div class="stat reveal d2"><b>&infin;</b><span>光影情绪</span></div>
+      </div>
+      <div class="signature reveal">&mdash; Lin.G</div>
+    </div>
+  </div>
+</section>
+<!-- 逆光：光影对话 -->
+<section class="shadow-sec" id="shadow">
+  <canvas class="pit" id="pit"></canvas>
+  <div class="shadow-vig"></div>
+  <div class="shadow-stage">
+    <div class="shadow-eyebrow">Backlight &middot; Photography</div>
+    <h2 class="shadow-h1">逆光里</h2>
+    <h3 class="shadow-h2">我与影对话</h3>
+    <div class="shadow-line"></div>
+    <p class="shadow-sub">Light falls &middot; shadows speak</p>
+  </div>
+</section>
+<!-- 作品集 -->
+<section class="sec-pad" id="works" style="padding-top:0">
+  <div class="wrap">
+    <div class="works-head">
+      <div>
+        <div class="sec-eyebrow reveal">Portfolio / 作品集</div>
+        <h2 class="sec-title reveal d1">精选作品</h2>
+      </div>
+      <div class="filters reveal d2" id="filters"><!-- JS 生成 --></div>
+    </div>
+    <div class="wall-stage" id="worksGrid"></div>
+  </div>
+</section>
+<!-- 联系 -->
+<section class="sec-pad contact" id="contact">
+  <div class="wrap contact-inner">
+    <div class="sec-eyebrow reveal" style="justify-content:center">Contact / 联系我</div>
+    <h2 class="contact-big reveal d1">一起创作<br>你的<em>专属影像</em></h2>
+    <div class="contact-lines reveal d2">
+      <div class="cl">约拍 / 合作 / 商拍 &middot; 欢迎随时联系</div>
+      <div class="cl">邮箱 <b><a href="mailto:2986550481@qq.com">2986550481@qq.com</a></b></div>
+      <div class="cl">微信 <b>17809032055</b>（添加请备注「约拍」）</div>
+    </div>
+    <div class="contact-cta reveal d2">
+      <a class="btn btn-primary" href="mailto:2986550481@qq.com">开始约拍<span class="arr">&#8594;</span></a>
+    </div>
+    <div class="socials reveal d3">
+      <a href="#" onclick="return false">小红书</a>
+      <a href="#" onclick="return false">微博</a>
+      <a href="#" onclick="return false">B 站</a>
+      <a href="#" onclick="return false">Instagram</a>
+    </div>
+  </div>
+</section>
+<!-- 页脚 -->
+<footer>
+  <div class="wrap foot">
+    <span class="mono">Lin.G<em>.</em></span>
+    <p>&copy; 2026 Lin.G &middot; 摄影作品集</p>
+    <a class="top" href="#home">回到顶部 &#8593;</a>
+  </div>
+</footer>
+<!-- 灯箱 -->
+<div id="lightbox">
+  <button class="lb-close" id="lbClose" aria-label="关闭">&#10005;</button>
+  <button class="lb-btn lb-prev" id="lbPrev" aria-label="上一张">&#8249;</button>
+  <img id="lbImg" src="" alt="">
+  <button class="lb-btn lb-next" id="lbNext" aria-label="下一张">&#8250;</button>
+  <div class="lb-info">
+    <div class="lb-cat" id="lbCat">写真</div>
+    <h3 id="lbTitle">作品</h3>
+    <div class="lb-count" id="lbCount">1 / 12</div>
+  </div>
+</div>
+<script>
+/* ================= 工具 ================= */
+function mulberry32(a){return function(){a|=0;a=a+0x6D2B79F5|0;var t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
+var PAL={
+  portrait:{c1:'#e9d2bb',c2:'#c08a63',c3:'#3a241c',glow:'#ffe9d6',accent:'#f2c9a4',cn:'写真'},
+  cos:{c1:'#241a45',c2:'#5b2a86',c3:'#0d0618',glow:'#a86bff',accent:'#c49bff',cn:'Cos'},
+  street:{c1:'#0f2027',c2:'#203a43',c3:'#2c5364',glow:'#4cc9f0',accent:'#ffb703',cn:'街拍'},
+  landscape:{c1:'#16302e',c2:'#2f6b5e',c3:'#0a1a18',glow:'#8fe3c2',accent:'#a8e6c1',cn:'风景'},
+  animal:{c1:'#3a2f1c',c2:'#6b522f',c3:'#1a140a',glow:'#f0c28a',accent:'#e6b47f',cn:'动物'},
+  about:{c1:'#0e2a2f',c2:'#1b4a52',c3:'#061114',glow:'#5ce1e6',accent:'#a8ecef',cn:'关于我'}
+};
+function svgURI(pal,num,w,h){
+  var seed=0,i;for(i=0;i<num.length;i++){seed=(seed+num.charCodeAt(i)*31+7)|0}
+  var rnd=mulberry32(seed||1),b='';
+  for(i=0;i<7;i++){
+    var cx=Math.round(rnd()*w),cy=Math.round(rnd()*h),r=Math.round(24+rnd()*170);
+    var op=(0.02+rnd()*0.06).toFixed(3);
+    b+='<ellipse cx="'+cx+'" cy="'+cy+'" rx="'+r+'" ry="'+Math.round(r*0.88)+'" fill="#ffffff" opacity="'+op+'"/>';
+  }
+  var diag='<polygon points="0,'+h+' '+Math.round(w*0.36)+',0 '+Math.round(w*0.52)+',0 '+Math.round(w*0.16)+','+h+'" fill="url(#line)" opacity="0.5"/>';
+  var svg='<svg xmlns="http://www.w3.org/2000/svg" width="'+w+'" height="'+h+'" viewBox="0 0 '+w+' '+h+'" preserveAspectRatio="xMidYMid slice">'+
+    '<defs>'+
+      '<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="'+pal.c1+'"/><stop offset="0.55" stop-color="'+pal.c2+'"/><stop offset="1" stop-color="'+pal.c3+'"/></linearGradient>'+
+      '<radialGradient id="glow" cx="0.5" cy="0.34" r="0.85"><stop offset="0" stop-color="'+pal.glow+'" stop-opacity="0.5"/><stop offset="0.6" stop-color="'+pal.glow+'" stop-opacity="0.12"/><stop offset="1" stop-color="'+pal.glow+'" stop-opacity="0"/></radialGradient>'+
+      '<linearGradient id="line" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffffff" stop-opacity="0.14"/><stop offset="0.5" stop-color="#ffffff" stop-opacity="0"/><stop offset="1" stop-color="#ffffff" stop-opacity="0.14"/></linearGradient>'+
+      '<radialGradient id="halo" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="'+pal.accent+'" stop-opacity="0.5"/><stop offset="1" stop-color="'+pal.accent+'" stop-opacity="0"/></radialGradient>'+
+      '<filter id="grain" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch"/><feColorMatrix type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.05 0"/><feComposite operator="over" in2="SourceGraphic"/></filter>'+
+      '<filter id="soft" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="60"/></filter>'+
+    '</defs>'+
+    '<rect width="'+w+'" height="'+h+'" fill="url(#bg)"/>'+
+    '<rect width="'+w+'" height="'+h+'" fill="url(#glow)"/>'+
+    '<circle cx="'+Math.round(w*0.5)+'" cy="'+Math.round(h*0.42)+'" r="'+Math.round(Math.min(w,h)*0.5)+'" fill="url(#halo)" filter="url(#soft)" opacity="0.8"/>'+
+    b+diag+
+    '<g filter="url(#grain)"><rect width="'+w+'" height="'+h+'" fill="#ffffff" opacity="0"/></g>'+
+    '<g font-family="Georgia, serif">'+
+      '<text x="48" y="70" font-size="13" letter-spacing="6" fill="#ffffff" opacity="0.75">Lin.G · '+pal.cn.toUpperCase()+'</text>'+
+      '<text x="48" y="95" font-size="10" letter-spacing="4" fill="#ffffff" opacity="0.4">LIN.G PHOTOGRAPHY</text>'+
+    '</g>'+
+    '<g font-family="Georgia, \'Songti SC\', \'SimSun\', serif">'+
+      '<text x="48" y="'+(h-92)+'" font-size="54" letter-spacing="8" fill="#ffffff" opacity="0.92">PHOTO '+num+'</text>'+
+      '<text x="50" y="'+(h-52)+'" font-size="15" letter-spacing="6" fill="#ffffff" opacity="0.6">'+pal.cn+' · 占位图</text>'+
+      '<text x="50" y="'+(h-26)+'" font-size="11" letter-spacing="3" fill="#ffffff" opacity="0.38">放入同名照片后自动替换</text>'+
+    '</g>'+
+  '</svg>';
+  return 'data:image/svg+xml;charset=utf-8,'+encodeURIComponent(svg);
+}
+/* 照片加载失败 → 占位图（真实照片放入 assets/img 同名文件后自动生效） */
+function phFallback(img){
+  img.onerror=null;
+  var d=img.dataset;
+  img.src=svgURI(PAL[d.pal]||PAL.portrait,d.num||'01',+d.w||900,+d.h||1200);
+  var card=img.closest('.work');
+  if(card){card.classList.add('is-ph')}
+}
+/* ================= LaserFlow 激光流光背景（原生 WebGL 复刻） ================= */
+var LASER_VS=[
+'attribute vec2 aPos;',
+'varying vec2 vUv;',
+'void main(){',
+'  vUv = aPos*0.5+0.5;',
+'  gl_Position = vec4(aPos,0.0,1.0);',
+'}'
+].join('\n');
+var LASER_FS=[
+'precision highp float;',
+'uniform float uTime;',
+'uniform vec2  uRes;',
+'uniform vec2  uMouse;',
+'uniform vec3  uColorA;',
+'uniform vec3  uColorB;',
+'uniform float uBeamX;',
+'uniform float uBeamY;',
+'uniform float uFlow;',
+'uniform float uDensity;',
+'uniform float uTilt;',
+'varying vec2 vUv;',
+'',
+'float hash(vec2 p){ p=fract(p*vec2(123.34,456.21)); p+=dot(p,p+45.32); return fract(p.x*p.y); }',
+'',
+'float noise(vec2 p){',
+'  vec2 i=floor(p); vec2 f=fract(p);',
+'  vec2 u=f*f*(3.0-2.0*f);',
+'  float a=hash(i);',
+'  float b=hash(i+vec2(1.0,0.0));',
+'  float c=hash(i+vec2(0.0,1.0));',
+'  float d=hash(i+vec2(1.0,1.0));',
+'  return mix(mix(a,b,u.x), mix(c,d,u.x), u.y);',
+'}',
+'',
+'float fbm(vec2 p){',
+'  float v=0.0; float a=0.5;',
+'  for(int i=0;i<4;i++){ v+=a*noise(p); p=p*2.03; a*=0.55; }',
+'  return v;',
+'}',
+'',
+'float beamEnergy(float s, float t){',
+'  float e=0.0;',
+'  e += 0.45+0.55*sin(s*13.0 - t*2.1);',
+'  e += 0.45+0.55*sin(s*23.0 - t*3.3 + 1.7);',
+'  e += 0.45+0.55*sin(s*5.5  - t*1.15 + 3.9);',
+'  return e/3.0;',
+'}',
+'',
+'void main(){',
+'  vec2 uv = vUv;',
+'  float asp = uRes.x/uRes.y;',
+'  vec2 p = vec2((uv.x-0.5)*asp, uv.y-0.5);',
+'',
+'  // 鼠标跟随倾斜',
+'  vec2 m = uMouse - 0.5;',
+'  p += m*uTilt*0.05;',
+'  float ang = m.x*uTilt*0.16;',
+'  float cs=cos(ang), sn=sin(ang);',
+'  p = mat2(cs,-sn,sn,cs)*p;',
+'',
+'  float t = uTime*uFlow;',
+'',
+'  // 横向激光束',
+'  float by = (uBeamY-0.5)*1.5;',
+'  float hy = p.y - by;',
+'  float coreH = exp(-hy*hy*1600.0);',
+'  float glowH = exp(-hy*hy*150.0)*0.55;',
+'  float eH = 0.30 + 0.70*beamEnergy(p.x*2.1 + t*0.55, t);',
+'  eH *= 0.55 + 0.45*fbm(vec2(p.x*1.7, t*0.14));',
+'  float shimmer = 0.6 + 0.4*noise(vec2(p.x*90.0, t*4.0 + p.y*40.0));',
+'  float H = (coreH*(0.75+0.45*shimmer) + glowH)*eH;',
+'',
+'  // 纵向激光束',
+'  float bx = (uBeamX-0.5)*1.5;',
+'  float vx = p.x - bx;',
+'  float coreV = exp(-vx*vx*1600.0);',
+'  float glowV = exp(-vx*vx*150.0)*0.55;',
+'  float eV = 0.30 + 0.70*beamEnergy(p.y*2.1 + t*0.45, t);',
+'  eV *= 0.55 + 0.45*fbm(vec2(p.y*1.7, t*0.14+3.0));',
+'  float shimmerV = 0.6 + 0.4*noise(vec2(p.y*90.0, t*4.0 + p.x*40.0 + 11.0));',
+'  float V = (coreV*(0.75+0.45*shimmerV) + glowV)*eV;',
+'',
+'  // 光丝飘散（沿光束流动的亮丝）',
+'  float W = 0.0;',
+'  float lanes = 10.0*uDensity;',
+'  for(int i=0;i<10;i++){',
+'    float fi = float(i);',
+'    if(fi>=lanes) continue;',
+'    float lane = (fi+0.5)/10.0;',
+'    float wx = p.x*3.0 + t*1.6 + fi*7.31;',
+'    float wy = (p.y-by) - (noise(vec2(wx, fi*3.7))*0.05 - 0.025);',
+'    float seg = noise(vec2(wx*0.8, fi*5.1));',
+'    W += exp(-wy*wy*2600.0) * (0.2+0.8*seg);',
+'    float vxx = p.y*3.0 + t*1.3 + fi*11.7;',
+'    float vyy = (p.x-bx) - (noise(vec2(vxx, fi*4.3))*0.05 - 0.025);',
+'    float segV = noise(vec2(vxx*0.8+7.0, fi*6.1));',
+'    W += exp(-vyy*vyy*2600.0) * (0.2+0.8*segV);',
+'  }',
+'  W *= 0.32;',
+'',
+'  vec3 col = vec3(0.071,0.059,0.09);',
+'  vec3 laser = uColorA*(H+W*0.6) + uColorB*(V+W*0.6);',
+'  col += laser;',
+'  col += uColorA*glowH*eH*0.22;',
+'  col += uColorB*glowV*eV*0.22;',
+'',
+'  // 暗角',
+'  float vig = 1.0 - dot(p,p)*0.55;',
+'  col *= clamp(vig,0.0,1.0);',
+'  col = 1.0 - exp(-col*1.6);',
+'  gl_FragColor = vec4(col,1.0);',
+'}'
+].join('\n');
+function compileShader(gl,type,src){
+  var s=gl.createShader(type);
+  gl.shaderSource(s,src);
+  gl.compileShader(s);
+  if(!gl.getShaderParameter(s,gl.COMPILE_STATUS)){
+    console.warn('LaserFlow shader error:',gl.getShaderInfoLog(s));
+    return null;
+  }
+  return s;
+}
+function initLaser(){
+  var canvas=document.getElementById('laserCanvas');
+  if(!canvas)return;
+  var gl=canvas.getContext('webgl',{antialias:true,alpha:false})||canvas.getContext('experimental-webgl',{antialias:true,alpha:false});
+  if(!gl){console.warn('WebGL 不可用，使用 CSS 兜底背景');return}
+  var vs=compileShader(gl,gl.VERTEX_SHADER,LASER_VS);
+  var fs=compileShader(gl,gl.FRAGMENT_SHADER,LASER_FS);
+  if(!vs||!fs)return;
+  var prog=gl.createProgram();
+  gl.attachShader(prog,vs);gl.attachShader(prog,fs);gl.linkProgram(prog);
+  if(!gl.getProgramParameter(prog,gl.LINK_STATUS)){console.warn('LaserFlow link error:',gl.getProgramInfoLog(prog));return}
+  gl.useProgram(prog);
+  var buf=gl.createBuffer();
+  gl.bindBuffer(gl.ARRAY_BUFFER,buf);
+  gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1, 3,-1, -1,3]),gl.STATIC_DRAW);
+  var aPos=gl.getAttribLocation(prog,'aPos');
+  gl.enableVertexAttribArray(aPos);
+  gl.vertexAttribPointer(aPos,2,gl.FLOAT,false,0,0);
+  var uTime=gl.getUniformLocation(prog,'uTime');
+  var uRes=gl.getUniformLocation(prog,'uRes');
+  var uMouse=gl.getUniformLocation(prog,'uMouse');
+  var uColorA=gl.getUniformLocation(prog,'uColorA');
+  var uColorB=gl.getUniformLocation(prog,'uColorB');
+  var uBeamX=gl.getUniformLocation(prog,'uBeamX');
+  var uBeamY=gl.getUniformLocation(prog,'uBeamY');
+  var uFlow=gl.getUniformLocation(prog,'uFlow');
+  var uDensity=gl.getUniformLocation(prog,'uDensity');
+  var uTilt=gl.getUniformLocation(prog,'uTilt');
+  gl.uniform3f(uColorA,1.0,0.72,0.38);   // 鎦金 A
+  gl.uniform3f(uColorB,0.85,0.48,0.27);     // 琥珀 B
+  gl.uniform1f(uBeamX,0.50);                 // 纵向光束居中
+  gl.uniform1f(uBeamY,0.40);                 // 横向光束略偏上（horizontalBeamOffset）
+  gl.uniform1f(uFlow,0.7);
+  gl.uniform1f(uDensity,window.innerWidth<768?0.7:0.8);
+  gl.uniform1f(uTilt,1.0);
+  var quality=1.0;
+  function resize(){
+    var mobile=window.innerWidth<768;
+    var dpr0=Math.min(window.devicePixelRatio||1,mobile?1.0:1.6);
+    var area=Math.max(1,window.innerWidth*window.innerHeight);
+    var dpr=dpr0;
+    if(dpr*dpr*area>1.9e6*quality){ dpr=Math.max(0.5,Math.sqrt((1.9e6*quality)/area)); }
+    var w=canvas.clientWidth||window.innerWidth;
+    var h=canvas.clientHeight||window.innerHeight;
+    canvas.width=Math.max(1,Math.round(w*dpr));
+    canvas.height=Math.max(1,Math.round(h*dpr));
+    gl.viewport(0,0,canvas.width,canvas.height);
+    gl.uniform2f(uRes,canvas.width,canvas.height);
+  }
+  resize();
+  window.addEventListener('resize',resize);
+  var mx=0.5,my=0.5;
+  document.addEventListener('mousemove',function(e){
+    var r=canvas.getBoundingClientRect();
+    if(r.width>0&&r.height>0){
+      mx=(e.clientX-r.left)/r.width;
+      my=(e.clientY-r.top)/r.height;
+    }
+  });
+  var start=performance.now();
+  var reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var running=true,degraded=0;
+  var frameCount=0,frameSum=0,lastT=null;
+  function frame(now){
+    if(window.__lgRingOn){running=false;return}
+    var t=(now-start)/1000;
+    if(lastT!==null){frameSum+=now-lastT}
+    lastT=now;frameCount++;
+    if(degraded===0&&frameCount===75){
+      if(frameSum/75>33){degraded=1;quality=0.5;resize();gl.uniform1f(uDensity,0.5)}
+    } else if(degraded===1&&frameCount===150){
+      if(frameSum/150>45){degraded=2;running=false;canvas.style.display='none'}
+    }
+    gl.uniform1f(uTime,t);
+    gl.uniform2f(uMouse,mx,my);
+    gl.drawArrays(gl.TRIANGLES,0,3);
+    if(!reduced&&running)requestAnimationFrame(frame);
+  }
+  document.addEventListener('visibilitychange',function(){
+    if(document.hidden){running=false}
+    else if(!reduced&&degraded<2){running=true;requestAnimationFrame(frame)}
+  });
+  requestAnimationFrame(frame);
+}
+/* ================= 作品数据 ================= */
+var CAT_CN={portrait:'写真',cos:'Cos',street:'街拍',landscape:'风景',animal:'动物'};
+var WORKS=[
+  {file:'photo-01.jpg',cat:'landscape',num:'01',title:'海平线',sub:'风景',w:1600,h:1067},
+  {file:'photo-02.jpg',cat:'animal',num:'02',title:'林间',sub:'动物',w:1600,h:1067},
+  {file:'photo-03.jpg',cat:'cos',num:'03',title:'登场',sub:'Cos',w:1067,h:1600},
+  {file:'photo-04.jpg',cat:'street',num:'04',title:'夜窗',sub:'街拍',w:1600,h:1175},
+  {file:'photo-05.jpg',cat:'cos',num:'05',title:'蓝调',sub:'Cos',w:1600,h:1067},
+  {file:'photo-06.jpg',cat:'landscape',num:'06',title:'云野',sub:'风景',w:1067,h:1600},
+  {file:'photo-07.jpg',cat:'landscape',num:'07',title:'余晖',sub:'风景',w:1600,h:1068},
+  {file:'photo-08.jpg',cat:'portrait',num:'08',title:'微光',sub:'写真',w:1067,h:1600},
+  {file:'photo-09.jpg',cat:'street',num:'09',title:'霓虹',sub:'街拍',w:1067,h:1600},
+  {file:'photo-10.jpg',cat:'landscape',num:'10',title:'落日',sub:'风景',w:1600,h:1067},
+  {file:'photo-11.jpg',cat:'portrait',num:'11',title:'暖阳',sub:'写真',w:1066,h:1600},
+  {file:'photo-12.jpg',cat:'street',num:'12',title:'一线天',sub:'街拍',w:1067,h:1600},
+  {file:'photo-13.jpg',cat:'landscape',num:'13',title:'云海',sub:'风景',w:1600,h:1067},
+  {file:'photo-14.jpg',cat:'animal',num:'14',title:'幽瞳',sub:'动物',w:1600,h:1064},
+  {file:'photo-15.jpg',cat:'landscape',num:'15',title:'萤火',sub:'风景',w:1600,h:1065},
+  {file:'photo-16.jpg',cat:'portrait',num:'16',title:'轮廓',sub:'写真',w:639,h:857},
+  {file:'photo-17.jpg',cat:'landscape',num:'17',title:'青野',sub:'风景',w:1067,h:1600},
+  {file:'photo-18.jpg',cat:'portrait',num:'18',title:'光晕',sub:'写真',w:1067,h:1600},
+  {file:'photo-19.jpg',cat:'animal',num:'19',title:'守望',sub:'动物',w:1600,h:1067},
+  {file:'photo-20.jpg',cat:'landscape',num:'20',title:'华灯',sub:'风景',w:1110,h:1600},
+  {file:'photo-21.jpg',cat:'portrait',num:'21',title:'夏荫',sub:'写真',w:1440,h:810},
+  {file:'photo-22.jpg',cat:'street',num:'22',title:'蓝夜',sub:'街拍',w:1067,h:1600},
+  {file:'photo-23.jpg',cat:'landscape',num:'23',title:'树影',sub:'风景',w:1059,h:1600},
+  {file:'photo-24.jpg',cat:'animal',num:'24',title:'凝望',sub:'动物',w:1123,h:1600},
+  {file:'photo-25.jpg',cat:'street',num:'25',title:'灯火',sub:'街拍',w:1067,h:1600},
+  {file:'photo-26.jpg',cat:'animal',num:'26',title:'晴日',sub:'动物',w:1600,h:1067},
+  {file:'photo-27.jpg',cat:'portrait',num:'27',title:'侧影',sub:'写真',w:968,h:1336},
+  {file:'photo-28.jpg',cat:'animal',num:'28',title:'正午',sub:'动物',w:1600,h:1067},
+  {file:'photo-29.jpg',cat:'landscape',num:'29',title:'霞光',sub:'风景',w:1067,h:1600},
+  {file:'photo-30.jpg',cat:'landscape',num:'30',title:'碧波',sub:'风景',w:1600,h:1067},
+  {file:'photo-31.jpg',cat:'portrait',num:'31',title:'映绿',sub:'写真',w:1067,h:1600},
+  {file:'photo-32.jpg',cat:'landscape',num:'32',title:'望月',sub:'风景',w:1600,h:1067},
+  {file:'photo-33.jpg',cat:'street',num:'33',title:'巷陌',sub:'街拍',w:1200,h:1600},
+  {file:'photo-34.jpg',cat:'street',num:'34',title:'灯影',sub:'街拍',w:1067,h:1600},
+  {file:'photo-35.jpg',cat:'landscape',num:'35',title:'远山',sub:'风景',w:1600,h:1067}
+,{file:'f01.jpg',cat:'animal',num:'36',title:'凝视',sub:'动物',w:1280,h:1920},
+  {file:'f02.jpg',cat:'landscape',num:'37',title:'水珠',sub:'风景',w:1920,h:1280},
+  {file:'f03.jpg',cat:'landscape',num:'38',title:'叶脉',sub:'风景',w:1280,h:1920},
+  {file:'f04.jpg',cat:'landscape',num:'39',title:'剪影',sub:'风景',w:1920,h:1280},
+  {file:'f05.jpg',cat:'animal',num:'40',title:'午后',sub:'动物',w:1920,h:1280},
+  {file:'f06.jpg',cat:'street',num:'41',title:'天际线',sub:'街拍',w:1280,h:1920},
+  {file:'f07.jpg',cat:'animal',num:'42',title:'夜色',sub:'动物',w:1280,h:1920},
+  {file:'f08.jpg',cat:'animal',num:'43',title:'白猫',sub:'动物',w:1280,h:1920},
+  {file:'f09.jpg',cat:'street',num:'44',title:'楼梯',sub:'街拍',w:1280,h:1920},
+  {file:'f10.jpg',cat:'street',num:'45',title:'驶过',sub:'街拍',w:2448,h:3264},
+  {file:'f11.jpg',cat:'landscape',num:'46',title:'芽庄',sub:'风景',w:3024,h:2005},
+  {file:'f12.jpg',cat:'landscape',num:'47',title:'桥下',sub:'风景',w:3454,h:5181},
+  {file:'f13.jpg',cat:'landscape',num:'48',title:'纳米比亚',sub:'风景',w:1280,h:1920},
+  {file:'f14.jpg',cat:'street',num:'49',title:'目光',sub:'街拍',w:6365,h:8486},
+  {file:'f15.jpg',cat:'street',num:'50',title:'地下',sub:'街拍',w:5152,h:7728},
+  {file:'f16.jpg',cat:'landscape',num:'51',title:'越南',sub:'风景',w:1920,h:1272}
+];
+/* ================= 渲染作品 ================= */
+/* ================= Drift Wall 渲染 ================= */
+var DRIFT={
+  columns:5, tileWidth:300, tileHeight:200, gap:22,
+  tilt:40, turn:-16, perspective:1200, depth:150,
+  speed:44, direction:'up', variance:0.45,
+  parallax:0.6, lift:84, fade:0.6, dim:1, overlayColor:'#000000'
+};
+var wallStage=document.getElementById('worksGrid');
+var wallScene=null,wallMover=null,wallRAF=null,wallParRAF=null;
+var wallOffset=0,wallSetH=1,wallLast=0,wallVisible=true;
+var currentItems=[];
+var currentFilter='all';
+var reducedMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+function wallParams(){
+  var w=window.innerWidth;
+  if(w<520){return {columns:3,tileWidth:112,tileHeight:82,gap:10,tilt:34,turn:-14,depth:80,speed:32,height:420,perspective:900,lift:0}}
+  if(w<860){return {columns:3,tileWidth:220,tileHeight:148,gap:16,tilt:38,turn:-15,depth:110,speed:40,height:560,perspective:1100,lift:64}}
+  return {columns:4,tileWidth:300,tileHeight:200,gap:22,tilt:40,turn:-16,depth:150,speed:44,height:780,perspective:1200,lift:84}
+}
+function filteredItems(){
+  var arr=[];
+  WORKS.forEach(function(w,i){
+    if(currentFilter==='all'||w.cat===currentFilter){arr.push({d:w,i:i})}
+  });
+  return arr;
+}
+function shuffle(a){
+  for(var k=a.length-1;k>0;k--){
+    var j=(Math.random()*(k+1))|0,t=a[k];a[k]=a[j];a[j]=t;
+  }
+  return a;
+}
+function buildWall(){
+  if(!wallStage)return;
+  currentItems=filteredItems();
+  if(!currentItems.length){wallStage.className='wall-stage';wallStage.innerHTML='<div class="wall-empty"></div>';wallScene=null;wallMover=null;return}
+  var p=wallParams();
+  wallStage.className='wall-stage';
+  wallStage.style.setProperty('--wall-persp',p.perspective+'px');
+  wallStage.style.setProperty('--wall-h',p.height+'px');
+  wallStage.style.setProperty('--wall-tilt',p.tilt+'deg');
+  wallStage.style.setProperty('--wall-turn',p.turn+'deg');
+  wallStage.style.setProperty('--wall-lift',(p.lift||0)+'px');
+  wallStage.style.setProperty('--wall-dim',Math.min(DRIFT.dim*0.45,0.55).toFixed(2));
+  wallStage.style.setProperty('--tw',p.tileWidth+'px');
+  wallStage.style.setProperty('--th',p.tileHeight+'px');
+  wallStage.innerHTML=
+    '<div class="wall-scene"><div class="wall-mover"></div></div>'+
+    '<div class="wall-overlay"></div>'+
+    '<div class="wall-fade top"></div>'+
+    '<div class="wall-fade bot"></div>';
+  wallScene=wallStage.querySelector('.wall-scene');
+  wallMover=wallStage.querySelector('.wall-mover');
+  var rowH=p.tileHeight+p.gap;
+  var rows=Math.max(Math.ceil(p.height/rowH*1.25)+2,Math.ceil(currentItems.length/p.columns));
+  var setH=rows*rowH;
+  wallSetH=setH;
+  var half=(p.columns-1)/2;
+  var deck=shuffle(currentItems.slice());
+  var frag=document.createDocumentFragment();
+  for(var s=0;s<2;s++){
+    for(var r=0;r<rows;r++){
+      for(var c=0;c<p.columns;c++){
+        var pos=r*p.columns+c;
+        var item=deck[pos%deck.length];
+        var x=(c-half)*(p.tileWidth+p.gap);
+        var y=r*rowH+s*setH;
+        var z=(Math.random()*2-1)*p.depth*DRIFT.variance;
+        var rot=(Math.random()*2-1)*3;
+        var t=document.createElement('div');
+        t.className='wtile';
+        t.style.transform='translate3d('+x+'px,'+y+'px,'+z.toFixed(1)+'px) rotateZ('+rot.toFixed(1)+'deg)';
+        t.innerHTML=
+          '<button type="button" class="wtile-btn" data-index="'+item.i+'">'+
+            '<img loading="lazy" decoding="async" src="assets/img/thumb/'+item.d.file+'" data-full="assets/img/'+item.d.file+'" alt="'+item.d.title+'"'+
+            ' data-pal="'+item.d.cat+'" data-num="'+item.d.num+'" data-w="'+item.d.w+'" data-h="'+item.d.h+'" onerror="phFallback(this)">'+
+            '<span class="wt-tag">'+CAT_CN[item.d.cat]+'</span>'+
+            '<span class="wt-plus">+</span>'+
+          '</button>';
+        frag.appendChild(t);
+      }
+    }
+  }
+  wallMover.appendChild(frag);
+}
+/* 经典网格（分类筛选时使用） */
+function renderGrid(){
+  if(!wallStage)return;
+  currentItems=filteredItems();
+  wallStage.className='works';
+  wallStage.style.removeProperty('--wall-h');
+  var frag=document.createDocumentFragment();
+  currentItems.forEach(function(it){
+    var d=it.d, ar=d.w/d.h;
+    var fig=document.createElement('figure');
+    fig.className='work';
+    fig.style.setProperty('--ar',ar.toFixed(3));
+    fig.innerHTML=
+      '<div class="work-media" data-index="'+it.i+'">'+
+        '<img loading="lazy" decoding="async" src="assets/img/thumb/'+d.file+'" data-full="assets/img/'+d.file+'" alt="'+d.title+'"'+
+        ' data-pal="'+d.cat+'" data-num="'+d.num+'" data-w="'+d.w+'" data-h="'+d.h+'" onerror="phFallback(this)">'+
+        '<div class="work-shade">'+
+          '<span class="work-cat">'+CAT_CN[d.cat]+'</span>'+
+          '<h3 class="work-title">'+d.title+'</h3>'+
+          '<p class="work-sub">'+d.sub+'</p>'+
+        '</div>'+
+        '<span class="work-plus">+</span>'+
+      '</div>';
+    frag.appendChild(fig);
+  });
+  wallStage.innerHTML='';
+  wallStage.appendChild(frag);
+  wallScene=null;wallMover=null;
+}
+/* 漂流动画 */
+function driftFrame(ts){
+  if(wallMover){
+    if(wallVisible&&!document.hidden){
+      var dt=(ts-wallLast)/1000;if(dt>0.1)dt=0.1;
+      wallOffset-=DRIFT.speed*dt*(DRIFT.direction==='down'?-1:1);
+      if(wallOffset<=-wallSetH)wallOffset+=wallSetH;
+      if(wallOffset>0)wallOffset-=wallSetH;
+      wallMover.style.transform='translate3d(0,'+wallOffset.toFixed(2)+'px,0)';
+    }
+  }
+  wallLast=ts;
+  wallRAF=requestAnimationFrame(driftFrame);
+}
+buildWall();
+/* 鼠标视差 */
+var wallNX=0,wallNY=0,wallRX=0,wallRY=0;
+if(window.matchMedia('(pointer:fine)').matches&&!reducedMotion){
+  wallStage.addEventListener('mousemove',function(e){
+    var r=wallStage.getBoundingClientRect();
+    wallNX=(e.clientX-r.left)/r.width-.5;
+    wallNY=(e.clientY-r.top)/r.height-.5;
+  });
+  wallStage.addEventListener('mouseleave',function(){wallNX=0;wallNY=0});
+  (function wallParLoop(){
+    wallRX+=(wallNX-wallRX)*.07;wallRY+=(wallNY-wallRY)*.07;
+    var p=wallParams();
+    var tx=p.tilt+wallRY*DRIFT.parallax*26;
+    var tz=p.turn+wallRX*DRIFT.parallax*26;
+    if(wallScene)wallScene.style.transform='rotateX('+tx.toFixed(2)+'deg) rotateZ('+tz.toFixed(2)+'deg)';
+    wallParRAF=requestAnimationFrame(wallParLoop);
+  })();
+}
+/* 离开视口自动暂停 */
+if('IntersectionObserver' in window){
+  var wallIO=new IntersectionObserver(function(entries){
+    entries.forEach(function(en){wallVisible=en.isIntersecting});
+  },{threshold:.05});
+  wallIO.observe(wallStage);
+}
+wallLast=performance.now();
+if(!reducedMotion)wallRAF=requestAnimationFrame(driftFrame);
+var wallRT=null;
+window.addEventListener('resize',function(){
+  clearTimeout(wallRT);
+  wallRT=setTimeout(function(){if(currentFilter==='all'){buildWall()}else{renderGrid()}},250);
+});
+/* ================= 筛选 ================= */
+var filters=document.getElementById('filters');
+var catCounts={};
+WORKS.forEach(function(it){catCounts[it.cat]=(catCounts[it.cat]||0)+1});
+var catOrder=['portrait','cos','street','landscape','animal'];
+filters.innerHTML='<button class="active" data-filter="all">全部 <small>'+WORKS.length+'</small></button>';
+catOrder.forEach(function(c){
+  if(catCounts[c]){
+    filters.innerHTML+='<button data-filter="'+c+'">'+CAT_CN[c]+' <small>'+catCounts[c]+'</small></button>';
+  }
+});
+filters.addEventListener('click',function(e){
+  var btn=e.target.closest('button');if(!btn)return;
+  Array.prototype.forEach.call(filters.children,function(b){b.classList.remove('active')});
+  btn.classList.add('active');
+  currentFilter=btn.dataset.filter;
+  if(currentFilter==='all'){buildWall()}else{renderGrid()}
+});
+/* ================= 灯箱 ================= */
+var lightbox=document.getElementById('lightbox');
+var lbImg=document.getElementById('lbImg');
+var lbCat=document.getElementById('lbCat');
+var lbTitle=document.getElementById('lbTitle');
+var lbCount=document.getElementById('lbCount');
+var lbIndex=0,lbList=[];
+function openLightbox(idx){
+  lbList=currentItems;
+  lbIndex=lbList.findIndex(function(x){return x.i===Number(idx)});
+  if(lbIndex<0)lbIndex=0;
+  renderLightbox();
+  lightbox.classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function renderLightbox(){
+  var x=lbList[lbIndex];
+  if(!x)return;
+  if(x.d.ring){
+    lbImg.src='assets/img/ring/'+x.d.file;
+    lbCat.textContent='Gallery';
+    lbTitle.textContent='作品 '+(lbIndex+1);
+    lbCount.textContent=(lbIndex+1)+' / '+lbList.length;
+    return;
+  }
+  lbImg.src='assets/img/'+x.d.file;
+  lbCat.textContent=CAT_CN[x.d.cat];
+  lbTitle.textContent=x.d.title;
+  lbCount.textContent=(lbIndex+1)+' / '+lbList.length;
+}
+function closeLightbox(){lightbox.classList.remove('open');document.body.style.overflow=''}
+function stepLightbox(d){lbIndex=(lbIndex+d+lbList.length)%lbList.length;renderLightbox()}
+wallStage.addEventListener('click',function(e){
+  var btn=e.target.closest('.wtile-btn');
+  if(btn){openLightbox(Number(btn.dataset.index));return}
+  var media=e.target.closest('.work-media');
+  if(media){openLightbox(Number(media.dataset.index))}
+});
+document.getElementById('lbClose').addEventListener('click',closeLightbox);
+document.getElementById('lbPrev').addEventListener('click',function(e){e.stopPropagation();stepLightbox(-1)});
+document.getElementById('lbNext').addEventListener('click',function(e){e.stopPropagation();stepLightbox(1)});
+lightbox.addEventListener('click',function(e){if(e.target===lightbox)closeLightbox()});
+document.addEventListener('keydown',function(e){
+  if(!lightbox.classList.contains('open'))return;
+  if(e.key==='Escape')closeLightbox();
+  if(e.key==='ArrowLeft')stepLightbox(-1);
+  if(e.key==='ArrowRight')stepLightbox(1);
+});
+/* ================= 滚动显现 ================= */
+var io=new IntersectionObserver(function(entries){
+  entries.forEach(function(en){
+    if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target)}
+  });
+},{threshold:.14});
+Array.prototype.forEach.call(document.querySelectorAll('.reveal'),function(el){io.observe(el)});
+/* 数字滚动 */
+var countIO=new IntersectionObserver(function(entries){
+  entries.forEach(function(en){
+    if(!en.isIntersecting)return;
+    var el=en.target,target=Number(el.dataset.count),cur=0,step=Math.max(1,Math.round(target/50));
+    var timer=setInterval(function(){
+      cur+=step;if(cur>=target){cur=target;clearInterval(timer)}
+      el.textContent=cur;
+    },26);
+    countIO.unobserve(el);
+  });
+},{threshold:.6});
+Array.prototype.forEach.call(document.querySelectorAll('.count'),function(el){countIO.observe(el)});
+/* ================= 导航 / 移动菜单 ================= */
+var header=document.getElementById('header');
+var burger=document.getElementById('burger');
+var mobileMenu=document.getElementById('mobileMenu');
+var scrollTicking=false;
+window.addEventListener('scroll',function(){
+  if(scrollTicking)return;
+  scrollTicking=true;
+  requestAnimationFrame(function(){
+    header.classList.toggle('scrolled',window.scrollY>40);
+    var h=document.documentElement;
+    var pct=h.scrollTop/(h.scrollHeight-h.clientHeight)*100;
+    document.getElementById('scrollbar').style.width=pct+'%';
+    var hero=document.getElementById('home');
+    if(hero){
+      var hr=hero.getBoundingClientRect();
+      var prog=Math.min(Math.max(-hr.top/hero.offsetHeight,0),1);
+      var hi=document.querySelector('.hero-inner');
+      var hf=document.querySelector('.hero-foot');
+      if(hi){hi.style.opacity=String(Math.max(1-prog*1.15,0));hi.style.transform='translateY('+(prog*46).toFixed(1)+'px)';}
+      if(hf){hf.style.opacity=String(Math.max(1-prog*1.6,0));}
+    }
+    scrollTicking=false;
+  });
+});
+burger.addEventListener('click',function(){
+  var open=burger.classList.toggle('open');
+  mobileMenu.classList.toggle('open',open);
+});
+Array.prototype.forEach.call(mobileMenu.querySelectorAll('a'),function(a){
+  a.addEventListener('click',function(){burger.classList.remove('open');mobileMenu.classList.remove('open')});
+});
+/* ================= 首屏星尘 ================= */
+(function(){
+  var cv=document.getElementById('dustCanvas');
+  if(!cv)return;
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  var ctx=cv.getContext('2d');
+  var fine=window.matchMedia('(pointer:fine)').matches;
+  var W=0,H=0,dpr=Math.min(window.devicePixelRatio||1,1.5);
+  var parts=[],mx=0,my=0,tx=0,ty=0,raf=null,last=0;
+  function resize(){
+    W=window.innerWidth;H=window.innerHeight;
+    cv.width=Math.round(W*dpr);cv.height=Math.round(H*dpr);
+    ctx.setTransform(dpr,0,0,dpr,0,0);
+    var n=W<640?34:(W<1200?56:80);
+    parts=[];
+    for(var i=0;i<n;i++){
+      parts.push({
+        x:Math.random()*W,y:Math.random()*H,
+        r:0.5+Math.random()*1.4,
+        a:0.12+Math.random()*0.5,
+        s:0.08+Math.random()*0.3,
+        ph:Math.random()*Math.PI*2,
+        dep:0.2+Math.random()*0.8
+      });
+    }
+  }
+  function frame(ts){
+    if(!ts)ts=performance.now();
+    var dt=Math.min((ts-last)/1000,0.05);last=ts;
+    tx+=(mx-tx)*0.05;ty+=(my-ty)*0.05;
+    ctx.clearRect(0,0,W,H);
+    for(var i=0;i<parts.length;i++){
+      var p=parts[i];
+      p.y-=p.s*dt*14;
+      p.x+=Math.sin(ts*0.0005+p.ph)*0.12;
+      if(p.y<-8){p.y=H+8;p.x=Math.random()*W;}
+      var wob=Math.sin(ts*0.0012+p.ph)*0.35+0.65;
+      var px=p.x+tx*36*p.dep;
+      var py=p.y+ty*26*p.dep;
+      ctx.beginPath();
+      ctx.arc(px,py,p.r,0,Math.PI*2);
+      ctx.fillStyle='rgba(224,181,110,'+(p.a*wob).toFixed(3)+')';
+      ctx.fill();
+    }
+    raf=requestAnimationFrame(frame);
+  }
+  resize();
+  window.addEventListener('resize',resize,{passive:true});
+  if(fine){
+    document.addEventListener('mousemove',function(e){
+      mx=(e.clientX/W-0.5);my=(e.clientY/H-0.5);
+    },{passive:true});
+    document.addEventListener('mouseleave',function(){mx=0;my=0});
+  }
+  function stop(){ if(raf){cancelAnimationFrame(raf);raf=null;} }
+  function go(){ if(!raf){last=performance.now();raf=requestAnimationFrame(frame);} }
+  go();
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(en){ if(en.isIntersecting){go();} else {stop();} });
+    },{threshold:0});
+    io.observe(cv);
+  }
+  window.__dustStats=function(){return {n:parts.length,on:!!raf}};
+})();
+
+/* ================= 首屏光晕 ================= */
+(function(){
+  var g=document.getElementById('heroGlow');
+  if(!g)return;
+  if(!window.matchMedia('(pointer:fine)').matches)return;
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  var gx=window.innerWidth/2,gy=window.innerHeight*0.4,cx=gx,cy=gy,raf=null;
+  setTimeout(function(){g.classList.add('is-on')},1700);
+  document.addEventListener('mousemove',function(e){gx=e.clientX;gy=e.clientY},{passive:true});
+  document.addEventListener('mouseleave',function(){gx=window.innerWidth/2;gy=window.innerHeight*0.4});
+  function frame(){
+    cx+=(gx-cx)*0.06;cy+=(gy-cy)*0.06;
+    g.style.transform='translate3d('+cx.toFixed(1)+'px,'+cy.toFixed(1)+'px,0)';
+    raf=requestAnimationFrame(frame);
+  }
+  raf=requestAnimationFrame(frame);
+})();
+
+/* ================= 自定义光标 ================= */
+var dot=document.querySelector('.cursor-dot');
+var ring=document.querySelector('.cursor-ring');
+var mx=0,my=0,rx=0,ry=0;
+if(window.matchMedia('(pointer:fine)').matches){
+  document.addEventListener('mousemove',function(e){
+    mx=e.clientX;my=e.clientY;
+    dot.style.left=mx+'px';dot.style.top=my+'px';
+  });
+  (function loop(){
+    rx+=(mx-rx)*.16;ry+=(my-ry)*.16;
+    ring.style.left=rx+'px';ring.style.top=ry+'px';
+    requestAnimationFrame(loop);
+  })();
+  document.addEventListener('mouseover',function(e){
+    var hot=e.target.closest('a,button,.wtile-btn,.work-media,.help-fab');
+    document.body.classList.toggle('cursor-on',!!hot);
+  });
+}
+/* ================= Hero 视差（激光背景轻微跟随） ================= */
+var heroBg=document.getElementById('heroBg');
+document.addEventListener('mousemove',function(e){
+  if(window.innerWidth<768)return;
+  var x=(e.clientX/window.innerWidth-.5),y=(e.clientY/window.innerHeight-.5);
+  if(heroBg){heroBg.style.transform='translate('+x*10+'px,'+y*8+'px)'}
+});
+/* ================= 关于卡片倾斜 ================= */
+var aboutFrame=document.getElementById('aboutFrame');
+if(aboutFrame&&window.matchMedia('(pointer:fine)').matches){
+  aboutFrame.addEventListener('mousemove',function(e){
+    var r=aboutFrame.getBoundingClientRect();
+    var px=(e.clientX-r.left)/r.width-.5, py=(e.clientY-r.top)/r.height-.5;
+    aboutFrame.style.transform='perspective(900px) rotateY('+(px*8)+'deg) rotateX('+(-py*8)+'deg)';
+  });
+  aboutFrame.addEventListener('mouseleave',function(){aboutFrame.style.transform='perspective(900px) rotateY(0) rotateX(0)'});
+}
+/* ================= 跑马灯（内容翻倍保证无缝） ================= */
+var track=document.getElementById('marqueeTrack');
+track.innerHTML+=track.innerHTML;
+/* ================= 首屏标题逐字浮现（延迟错开） ================= */
+var heroName=document.querySelector('.hero-name');
+if(heroName){
+  Array.prototype.forEach.call(heroName.querySelectorAll('.ln span'),function(s,i){
+    s.style.animationDelay=(0.06+i*0.05)+'s';
+  });
+}
+/* ================= 启动 ================= */
+initLaser();
+/* ================= 预加载 ================= */
+/* 从 moment 页返回时直接进入，跳过加载界面 */
+try{
+  if(sessionStorage.getItem('lg_nosplash')==='1'){
+    sessionStorage.removeItem('lg_nosplash');
+    var pl0=document.getElementById('preloader');
+    if(pl0){pl0.classList.add('done');}
+  }
+}catch(e){}
+window.addEventListener('load',function(){
+  setTimeout(function(){var pl=document.getElementById('preloader');if(pl)pl.classList.add('done')},500);
+});
+/* 兜底：加载 2.8s 后强制隐藏加载层（防止意外卡住） */
+setTimeout(function(){
+  var pl=document.getElementById('preloader');
+  if(pl&&!pl.classList.contains('done')){pl.classList.add('done')}
+},2800);
+/* ================= 按钮磁吸微交互 ================= */
+(function(){
+  if(!window.matchMedia('(pointer:fine)').matches)return;
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  var btns=document.querySelectorAll('.btn,.nav-cta');
+  Array.prototype.forEach.call(btns,function(btn){
+    btn.addEventListener('mousemove',function(e){
+      var r=btn.getBoundingClientRect();
+      var dx=(e.clientX-(r.left+r.width/2)), dy=(e.clientY-(r.top+r.height/2));
+      btn.style.transform='translate('+dx*0.18+'px,'+dy*0.28+'px)';
+    });
+    btn.addEventListener('mouseleave',function(){btn.style.transform=''});
+  });
+})();
+</script>
+<script>
+/* ================= Sidebar: scroll progress + section highlight ================= */
+(function(){
+  var links=Array.prototype.slice.call(document.querySelectorAll('.sb-link'));
+  var prog=document.getElementById('sbProg');
+  var ghost=document.getElementById('sbGhost');
+  var map={},names={home:'01',about:'02',works:'03',contact:'04'};
+  links.forEach(function(a){
+    var id=a.getAttribute('href').slice(1);
+    var el=document.getElementById(id);
+    if(el) map[id]={el:el,link:a};
+  });
+  var ticking=false;
+  function update(){
+    var h=document.documentElement, b=document.body;
+    var max=h.scrollHeight-h.clientHeight;
+    var top=window.pageYOffset||h.scrollTop||b.scrollTop||0;
+    var pct=max>0?top/max:0;
+    if(prog) prog.style.height=Math.max(0,Math.min(1,pct)*100).toFixed(2)+'%';
+    var cur='home';
+    Object.keys(map).forEach(function(id){
+      if(map[id].el.getBoundingClientRect().top<=window.innerHeight*0.42){cur=id}
+    });
+    if(top+window.innerHeight>=h.scrollHeight-6) cur='contact';
+    links.forEach(function(a){a.classList.toggle('active',a===map[cur].link)});
+    if(ghost) ghost.textContent=names[cur]||'';
+  }
+  window.addEventListener('scroll',function(){
+    if(ticking)return;ticking=true;
+    requestAnimationFrame(function(){update();ticking=false});
+  },{passive:true});
+  window.addEventListener('resize',update);
+  update();
+})();
+</script>
+<script>
+/* Shadow page - Plasma (React Bits faithful, vanilla WebGL2, no deps) */
+(function () {
+  var canvas = document.getElementById('pit');
+  if (!canvas) return;
+  var containerEl = canvas.parentElement || canvas;
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // Site-tuned config (black & gold)
+  var CFG = {
+    color: '#eec07a',
+    speed: 0.7,
+    direction: 'forward',
+    scale: 0.8,
+    opacity: 1.0,
+    mouseInteractive: true,
+    renderScale: 0.6,
+    maxDpr: 1,
+    targetFps: 30,
+    iterations: 48
+  };
+  function hexToRgb(hex) {
+    var m = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+    if (!m) return [1, 0.5, 0.2];
+    return [parseInt(m[1], 16) / 255, parseInt(m[2], 16) / 255, parseInt(m[3], 16) / 255];
+  }
+  var VERT = [
+    '#version 300 es',
+    'precision highp float;',
+    'in vec2 position;',
+    'in vec2 uv;',
+    'out vec2 vUv;',
+    'void main() { vUv = uv; gl_Position = vec4(position, 0.0, 1.0); }'
+  ].join('\n');
+  var ORIGINAL_QUALITY = 60;
+  function buildFragment(iterations) {
+    return [
+      '#version 300 es',
+      'precision highp float;',
+      'uniform vec2 iResolution;',
+      'uniform float iTime;',
+      'uniform vec3 uCustomColor;',
+      'uniform float uUseCustomColor;',
+      'uniform float uSpeed;',
+      'uniform float uDirection;',
+      'uniform float uScale;',
+      'uniform float uOpacity;',
+      'uniform vec2 uMouse;',
+      'uniform float uMouseInteractive;',
+      'uniform float uQuality;',
+      'uniform float uStepScale;',
+      'out vec4 fragColor;',
+      'void mainImage(out vec4 o, vec2 C) {',
+      '  vec2 center = iResolution.xy * 0.5;',
+      '  C = (C - center) / uScale + center;',
+      '  vec2 mouseOffset = (uMouse - center) * 0.0002;',
+      '  C += mouseOffset * length(C - center) * step(0.5, uMouseInteractive);',
+      '  float i, d, z, T = iTime * uSpeed * uDirection;',
+      '  vec3 O, p, S;',
+      '  for (vec2 r = iResolution.xy, Q; ++i < 60.0; O += o.w/d*o.xyz) {',
+      '    p = z*normalize(vec3(C-.5*r,r.y));',
+      '    p.z -= 4.;',
+      '    S = p;',
+      '    d = p.y-T;',
+      '    p.x += .4*(1.+p.y)*sin(d + p.x*0.1)*cos(.34*d + p.x*0.05);',
+      '    Q = p.xz *= mat2(cos(p.y+vec4(0,11,33,0)-T));',
+      '    z += d = (abs(sqrt(length(Q*Q)) - .25*(5.+S.y))/3.+8e-4) * uStepScale;',
+      '    o = 1.+sin(S.y+p.z*.5+S.z-length(S-p)+vec4(2,1,0,8));',
+      '    if (i >= uQuality) break;',
+      '  }',
+      '  o.xyz = tanh(O/1e4);',
+      '}',
+      'bool finite1(float x){ return !(isnan(x) || isinf(x)); }',
+      'vec3 sanitize(vec3 c){ return vec3(finite1(c.r)?c.r:0.0, finite1(c.g)?c.g:0.0, finite1(c.b)?c.b:0.0); }',
+      'void main() {',
+      '  vec4 o = vec4(0.0);',
+      '  mainImage(o, gl_FragCoord.xy);',
+      '  vec3 rgb = sanitize(o.rgb);',
+      '  float intensity = (rgb.r + rgb.g + rgb.b) / 3.0;',
+      '  vec3 customColor = intensity * uCustomColor * 2.4;',
+      '  vec3 finalColor = mix(rgb, customColor, step(0.5, uUseCustomColor));',
+      '  float alpha = length(rgb) * uOpacity;',
+      '  fragColor = vec4(finalColor, alpha);',
+      '}'
+    ].join('\n');
+  }
+  var gl = null;
+  try { gl = canvas.getContext('webgl2', { alpha: true, antialias: false, premultipliedAlpha: true }); } catch (e) {}
+  if (!gl) return;
+  function compile(type, src) {
+    var s = gl.createShader(type);
+    gl.shaderSource(s, src);
+    gl.compileShader(s);
+    if (!gl.getShaderParameter(s, gl.COMPILE_STATUS)) {
+      if (window.console && console.warn) console.warn('Plasma shader error:', gl.getShaderInfoLog(s));
+      return null;
+    }
+    return s;
+  }
+  var vs = compile(gl.VERTEX_SHADER, VERT);
+  var fs = compile(gl.FRAGMENT_SHADER, buildFragment(CFG.iterations));
+  if (!vs || !fs) return;
+  var prog = gl.createProgram();
+  gl.attachShader(prog, vs);
+  gl.attachShader(prog, fs);
+  gl.linkProgram(prog);
+  if (!gl.getProgramParameter(prog, gl.LINK_STATUS)) {
+    if (window.console && console.warn) console.warn('Plasma link error:', gl.getProgramInfoLog(prog));
+    return;
+  }
+  gl.useProgram(prog);
+  // fullscreen triangle (position + uv interleaved)
+  var buf = gl.createBuffer();
+  gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([
+    -1, -1, 0, 0,
+     3, -1, 2, 0,
+    -1,  3, 0, 2
+  ]), gl.STATIC_DRAW);
+  var aPos = gl.getAttribLocation(prog, 'position');
+  var aUv = gl.getAttribLocation(prog, 'uv');
+  gl.enableVertexAttribArray(aPos);
+  gl.vertexAttribPointer(aPos, 2, gl.FLOAT, false, 16, 0);
+  gl.enableVertexAttribArray(aUv);
+  gl.vertexAttribPointer(aUv, 2, gl.FLOAT, false, 16, 8);
+  var U = {};
+  ['iResolution', 'iTime', 'uCustomColor', 'uUseCustomColor', 'uSpeed', 'uDirection', 'uScale', 'uOpacity', 'uMouse', 'uMouseInteractive', 'uQuality', 'uStepScale'].forEach(function (n) {
+    U[n] = gl.getUniformLocation(prog, n);
+  });
+  var customRgb = hexToRgb(CFG.color);
+  gl.uniform2f(U.iResolution, 1, 1);
+  gl.uniform1f(U.iTime, 0);
+  gl.uniform3f(U.uCustomColor, customRgb[0], customRgb[1], customRgb[2]);
+  gl.uniform1f(U.uUseCustomColor, CFG.color ? 1 : 0);
+  gl.uniform1f(U.uSpeed, CFG.speed * 0.4);
+  gl.uniform1f(U.uDirection, CFG.direction === 'reverse' ? -1 : 1);
+  gl.uniform1f(U.uScale, CFG.scale);
+  gl.uniform1f(U.uOpacity, CFG.opacity);
+  gl.uniform2f(U.uMouse, 0, 0);
+  gl.uniform1f(U.uMouseInteractive, CFG.mouseInteractive ? 1 : 0);
+  gl.uniform1f(U.uQuality, CFG.iterations);
+  gl.uniform1f(U.uStepScale, ORIGINAL_QUALITY / CFG.iterations);
+  var dpr = Math.min(window.devicePixelRatio || 1, CFG.maxDpr);
+  function setSize() {
+    var rect = containerEl.getBoundingClientRect();
+    var w = Math.max(1, Math.round(rect.width * CFG.renderScale * dpr));
+    var h = Math.max(1, Math.round(rect.height * CFG.renderScale * dpr));
+    if (canvas.width !== w) canvas.width = w;
+    if (canvas.height !== h) canvas.height = h;
+    gl.viewport(0, 0, w, h);
+    gl.uniform2f(U.iResolution, w, h);
+  }
+  var pendingMouse = null;
+  if (CFG.mouseInteractive) {
+    canvas.addEventListener('mousemove', function (e) {
+      var rect = containerEl.getBoundingClientRect();
+      pendingMouse = { x: e.clientX - rect.left, y: e.clientY - rect.top };
+    }, { passive: true });
+  }
+  var resizePending = false;
+  var ro = null;
+  if (window.ResizeObserver) {
+    ro = new ResizeObserver(function () {
+      if (resizePending) return;
+      resizePending = true;
+      requestAnimationFrame(function () { resizePending = false; setSize(); });
+    });
+    ro.observe(containerEl);
+  }
+  setSize();
+  window.addEventListener('resize', setSize);
+  var isVisible = true, tabVisible = document.visibilityState !== 'hidden', contextLost = false;
+  var t0 = performance.now(), lastFrameTime = 0, raf = 0;
+  var frameInterval = 1000 / CFG.targetFps;
+  function renderFrame(t) {
+    if (pendingMouse) {
+      gl.uniform2f(U.uMouse, pendingMouse.x, pendingMouse.y);
+      pendingMouse = null;
+    }
+    var timeValue = (t - t0) * 0.001;
+    if (CFG.direction === 'pingpong') {
+      var pingpongDuration = 10;
+      var segmentTime = timeValue % pingpongDuration;
+      var isForward = Math.floor(timeValue / pingpongDuration) % 2 === 0;
+      var u = segmentTime / pingpongDuration;
+      var smooth = u * u * (3 - 2 * u);
+      var pingpongTime = isForward ? smooth * pingpongDuration : (1 - smooth) * pingpongDuration;
+      gl.uniform1f(U.uDirection, 1);
+      gl.uniform1f(U.iTime, pingpongTime);
+    } else {
+      gl.uniform1f(U.iTime, timeValue);
+    }
+    gl.drawArrays(gl.TRIANGLES, 0, 3);
+  }
+  function loop(t) {
+    if (contextLost || !isVisible || !tabVisible) return;
+    if (t - lastFrameTime < frameInterval) { raf = requestAnimationFrame(loop); return; }
+    lastFrameTime = t;
+    renderFrame(t);
+    raf = requestAnimationFrame(loop);
+  }
+  canvas.addEventListener('webglcontextlost', function (e) {
+    e.preventDefault();
+    contextLost = true;
+    cancelAnimationFrame(raf);
+  });
+  canvas.addEventListener('webglcontextrestored', function () {
+    contextLost = false;
+    if (isVisible && tabVisible && !reduced) { cancelAnimationFrame(raf); lastFrameTime = 0; raf = requestAnimationFrame(loop); }
+  });
+  var io = new IntersectionObserver(function (entries) {
+    var wasVisible = isVisible;
+    isVisible = entries[0].isIntersecting;
+    if (isVisible && !wasVisible && !contextLost && tabVisible && !reduced) { cancelAnimationFrame(raf); lastFrameTime = 0; raf = requestAnimationFrame(loop); }
+  }, { threshold: 0 });
+  io.observe(containerEl);
+  function onVis() {
+    tabVisible = document.visibilityState !== 'hidden';
+    if (tabVisible && isVisible && !contextLost && !reduced) { cancelAnimationFrame(raf); lastFrameTime = 0; raf = requestAnimationFrame(loop); }
+    else { cancelAnimationFrame(raf); }
+  }
+  document.addEventListener('visibilitychange', onVis);
+  if (reduced) {
+    gl.uniform1f(U.iTime, 0);
+    gl.drawArrays(gl.TRIANGLES, 0, 3);
+  } else {
+    raf = requestAnimationFrame(loop);
+  }
+})();
+</script>
+<script>
+/* ================= Sidebar toggle ================= */
+(function(){
+  var toggle = document.getElementById('sidebarToggle');
+  if (!toggle) return;
+  var KEY = 'lg_sidebar_closed';
+  function apply(closed, animate) {
+    document.body.classList.toggle('sidebar-closed', closed);
+    toggle.setAttribute('aria-expanded', String(!closed));
+    if (animate) window.dispatchEvent(new Event('resize'));
+    try { localStorage.setItem(KEY, closed ? '1' : '0'); } catch (e) {}
+  }
+  var saved = null;
+  try { saved = localStorage.getItem(KEY); } catch (e) {}
+  if (saved === '1') { apply(true, false); }
+  toggle.addEventListener('click', function () {
+    apply(!document.body.classList.contains('sidebar-closed'), true);
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && !document.body.classList.contains('sidebar-closed')) { apply(true, true); }
+  });
+})();
+</script>
+<script src="assets/vendor/three.min.js"></script>
+<script src="assets/vendor/ring-data.js"></script>
+<script>
+/* ============================================================
+   LIN.G Ring Hero - K95-style WebGL photo cylinder
+   Rings / Spiral layouts, scroll-driven spin & drift, hover,
+   click-to-open lightbox, staggered blur-in entrance.
+   Runs on file:// and http:// alike (local three.min.js).
+   ============================================================ */
+(function () {
+  'use strict';
+  var canvas = document.getElementById('ringCanvas');
+  if (!canvas) return;
+  var RING_FILES = window.LG_RING_FILES || [];
+  if (!RING_FILES.length) { start2DFallback(); return; }
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var THREE = null, renderer = null, scene = null, camera = null, raycaster = null;
+  var groups = [], panels = [], textures = {};
+  var texTotal = 0, texLoaded = 0, texFailed = 0;
+  var cfg = null, started = false, failed = false;
+  var pointer = { x: 0, y: 0, has: false };
+  var layoutMix = 0, layoutTarget = 0;
+  var rotOffset = 0, rotVel = 0, drift = 0, driftVel = 0;
+  var bendH = 0, bendV = 0, camX = 0, camY = 0;
+  var hovered = null;
+  var visible = true;
+  var entranceBegin = -1, entranceReady = false;
+  var displayChecked = false;
+  var loopFrames = 0, lastErr = null;
+  var clock = 0, last = performance.now();
+  var VS = [
+    'uniform float uTime;',
+    'uniform float uBendH;',
+    'uniform float uBendV;',
+    'uniform float uPhase;',
+    'varying vec2 vUv;',
+    'varying float vViewZ;',
+    'void main(){',
+    '  vUv = uv;',
+    '  vec3 pos = position;',
+    '  float xn = (uv.x - 0.5) * 2.0;',
+    '  float yn = (uv.y - 0.5) * 2.0;',
+    '  float archX = 1.0 - xn * xn;',
+    '  float archY = 1.0 - yn * yn;',
+    '  pos.z -= archX * uBendH;',
+    '  pos.z -= archY * uBendV;',
+    '  pos.z += sin(uv.y * 6.28318 + uTime * 0.5 + uPhase) * sin(uv.x * 3.14159 + uTime * 0.32 + uPhase * 1.3) * 0.014;',
+    '  vec4 mv = modelViewMatrix * vec4(pos, 1.0);',
+    '  vViewZ = -mv.z;',
+    '  gl_Position = projectionMatrix * mv;',
+    '}'
+  ].join('\n');
+  var FS = [
+    'precision highp float;',
+    'uniform sampler2D uTexture;',
+    'uniform float uOpacity;',
+    'uniform float uBlur;',
+    'uniform float uAspect;',
+    'uniform float uTexAspect;',
+    'uniform float uHover;',
+    'uniform float uDepthNear;',
+    'uniform float uDepthFar;',
+    'uniform vec3 uDepthColor;',
+    'varying vec2 vUv;',
+    'varying float vViewZ;',
+    'vec4 smp(sampler2D tex, vec2 uv, float blur){',
+    '  if (blur <= 0.0005) return texture2D(tex, uv);',
+    '  vec4 acc = texture2D(tex, uv) * 0.25;',
+    '  acc += texture2D(tex, uv + vec2(blur, 0.0)) * 0.125;',
+    '  acc += texture2D(tex, uv + vec2(-blur, 0.0)) * 0.125;',
+    '  acc += texture2D(tex, uv + vec2(0.0, blur)) * 0.125;',
+    '  acc += texture2D(tex, uv + vec2(0.0, -blur)) * 0.125;',
+    '  acc += texture2D(tex, uv + vec2(blur, blur)) * 0.0625;',
+    '  acc += texture2D(tex, uv + vec2(-blur, blur)) * 0.0625;',
+    '  acc += texture2D(tex, uv + vec2(blur, -blur)) * 0.0625;',
+    '  acc += texture2D(tex, uv + vec2(-blur, -blur)) * 0.0625;',
+    '  return acc;',
+    '}',
+    'void main(){',
+    '  vec2 uv = vUv;',
+    '  if (uTexAspect > uAspect) {',
+    '    float s = uAspect / uTexAspect;',
+    '    uv.x = (vUv.x - 0.5) * s + 0.5;',
+    '  } else {',
+    '    float s = uTexAspect / uAspect;',
+    '    uv.y = (vUv.y - 0.5) * s + 0.5;',
+    '  }',
+    '  if (uv.x < 0.0 || uv.x > 1.0 || uv.y < 0.0 || uv.y > 1.0) discard;',
+    '  vec4 col = smp(uTexture, uv, uBlur);',
+    '  float depthT = smoothstep(uDepthNear, uDepthFar, vViewZ);',
+    '  float luma = dot(col.rgb, vec3(0.2126, 0.7152, 0.0722));',
+    '  vec3 toned = mix(col.rgb, vec3(luma), depthT * 0.08);',
+    '  toned = mix(toned, uDepthColor, depthT * 0.12);',
+    '  toned = toned * 1.28 + 0.02;',
+    '  float d = max(abs(vUv.x - 0.5), abs(vUv.y - 0.5)) * 2.0;',
+    '  float rim = smoothstep(0.86, 1.0, d);',
+    '  vec3 gold = vec3(0.851, 0.655, 0.357);',
+    '  vec3 base = mix(toned, toned * 1.18 + gold * 0.05, uHover);',
+    '  vec3 outCol = mix(base, base * 0.4 + gold, rim * uHover * 0.85);',
+    '  gl_FragColor = vec4(outCol, col.a * uOpacity);',
+    '}'
+  ].join('\n');
+  function params() {
+    var w = window.innerWidth;
+    if (w < 520)  return { fov: 72, cameraZ: 10.5, radius: 4.3,  panelW: 1.02, panelH: 1.46, rowSpacing: 4.4, rows: 4, perRow: 10, cy: -0.8 };
+    if (w < 768)  return { fov: 66, cameraZ: 11,   radius: 5.3,  panelW: 1.14, panelH: 1.62, rowSpacing: 5.2, rows: 4, perRow: 11, cy: -0.8 };
+    if (w < 1024) return { fov: 60, cameraZ: 11.5, radius: 5.6,  panelW: 1.42, panelH: 1.98, rowSpacing: 5.4, rows: 5, perRow: 15, cy: -1.2 };
+    return         { fov: 50, cameraZ: 12.5, radius: 6.4,  panelW: 1.66, panelH: 2.32, rowSpacing: 6.2, rows: 5, perRow: 16, cy: -1.5 };
+  }
+  function shuffle(arr, seed) {
+    var a = arr.slice();
+    var s = (seed >>> 0) || 1;
+    function rnd() { s = (s + 0x6D2B79F5) | 0; var t = Math.imul(s ^ (s >>> 15), 1 | s); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t; return ((t ^ (t >>> 14)) >>> 0) / 4294967296; }
+    for (var i = a.length - 1; i > 0; i--) { var j = Math.floor(rnd() * (i + 1)); var tmp = a[i]; a[i] = a[j]; a[j] = tmp; }
+    return a;
+  }
+  function texPath(file) { return 'assets/img/ring/thumb/' + file; }
+  function loadTexture(file, cb) {
+    var url = (window.LG_RING && window.LG_RING[file]) || texPath(file);
+    if (textures[url]) { if (cb) cb(textures[url]); return; }
+    var img = new Image();
+    img.decoding = 'async';
+    img.onload = function () {
+      try {
+        var t = new THREE.Texture(img);
+        t.colorSpace = THREE.SRGBColorSpace;
+        t.minFilter = THREE.LinearFilter;
+        t.magFilter = THREE.LinearFilter;
+        t.generateMipmaps = false;
+        t.needsUpdate = true;
+        texLoaded++;
+        textures[url] = t;
+        if (cb) cb(t);
+      } catch (e) { texFailed++; if (cb) cb(null); }
+    };
+    img.onerror = function () { texFailed++; if (cb) cb(null); };
+    img.src = url;
+  }
+  function makeMaterial(file) {
+    var mat = new THREE.ShaderMaterial({
+      uniforms: {
+        uTexture: { value: null },
+        uOpacity: { value: 0 },
+        uBlur: { value: 0.14 },
+        uAspect: { value: cfg.panelW / cfg.panelH },
+        uTexAspect: { value: 1.5 },
+        uHover: { value: 0 },
+        uTime: { value: 0 },
+        uBendH: { value: 0 },
+        uBendV: { value: 0 },
+        uPhase: { value: Math.random() * Math.PI * 2 },
+        uDepthNear: { value: cfg.cameraZ * 0.55 },
+        uDepthFar: { value: cfg.cameraZ * 1.9 },
+        uDepthColor: { value: new THREE.Color(0x3a2c18) }
+      },
+      vertexShader: VS,
+      fragmentShader: FS,
+      transparent: true,
+      depthWrite: false,
+      side: THREE.DoubleSide,
+      toneMapped: false
+    });
+    loadTexture(file, function (t) {
+      if (t) {
+        mat.uniforms.uTexture.value = t;
+        var iw = t.image ? (t.image.naturalWidth || t.image.width) : 0;
+        var ih = t.image ? (t.image.naturalHeight || t.image.height) : 0;
+        if (iw && ih) mat.uniforms.uTexAspect.value = iw / ih;
+      }
+    });
+    return mat;
+  }
+  function build() {
+    cfg = params();
+    scene = new THREE.Scene();
+    camera = new THREE.PerspectiveCamera(cfg.fov, canvas.clientWidth / Math.max(1, canvas.clientHeight), 0.1, 300);
+    camera.position.set(0, 0, cfg.cameraZ);
+    raycaster = new THREE.Raycaster();
+    var geo = new THREE.PlaneGeometry(1, 1, 24, 16);
+    var rows = cfg.rows, per = cfg.perRow;
+    var used = {};
+    for (var r = 0; r < rows; r++) {
+      var order = shuffle(RING_FILES, 1000 + r * 97);
+      var grp = new THREE.Group();
+      for (var s = 0; s < per; s++) {
+        var file = order[s % order.length];
+        used[file] = true;
+        var mat = makeMaterial(file);
+        var mesh = new THREE.Mesh(geo, mat);
+        mesh.userData = {
+          file: file,
+          ringIndex: RING_FILES.indexOf(file),
+          thetaRing: (s + r * 0.5) / per * Math.PI * 2,
+          thetaSpiral: s / per * Math.PI * 2,
+          ySpiral: (s / per - 0.5) * cfg.rowSpacing,
+          entranceDelay: 260 + Math.random() * 850,
+          entranceDone: false
+        };
+        mesh.scale.set(cfg.panelW, cfg.panelH, 1);
+        grp.add(mesh);
+        panels.push(mesh);
+      }
+      scene.add(grp);
+      groups.push(grp);
+    }
+    texTotal = Object.keys(used).length;
+    place(layoutMix);
+    resize();
+  }
+  function place(mix) {
+    if (!cfg) return;
+    var R = cfg.radius * (1 + (0.74 - 1) * mix);
+    var sc = 1 + (1.22 - 1) * mix;
+    for (var i = 0; i < panels.length; i++) {
+      var p = panels[i], u = p.userData;
+      var th = u.thetaRing + (u.thetaSpiral - u.thetaRing) * mix;
+      p.position.x = Math.cos(th) * R;
+      p.position.z = Math.sin(th) * R;
+      p.position.y = u.ySpiral * mix;
+      p.rotation.y = -(th - Math.PI / 2);
+      p.scale.set(cfg.panelW * sc, cfg.panelH * sc, 1);
+    }
+  }
+  function resize() {
+    if (!renderer || !camera) return;
+    var w = canvas.clientWidth || window.innerWidth;
+    var h = canvas.clientHeight || window.innerHeight;
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.5));
+    renderer.setSize(w, h, false);
+    var prev = cfg;
+    cfg = params();
+    camera.fov = cfg.fov;
+    camera.aspect = w / Math.max(1, h);
+    camera.position.set(0, 0, cfg.cameraZ);
+    camera.updateProjectionMatrix();
+    // re-scale panels + depth uniforms on breakpoint change
+    if (prev && (prev.rows !== cfg.rows || prev.perRow !== cfg.perRow)) {
+      rebuild();
+      return;
+    }
+    for (var i = 0; i < panels.length; i++) {
+      var p = panels[i], u = p.userData;
+      p.scale.set(cfg.panelW, cfg.panelH, 1);
+      u.ySpiral = (u.thetaSpiral / (Math.PI * 2) - 0.5) * cfg.rowSpacing;
+      if (p.material.uniforms) {
+        p.material.uniforms.uAspect.value = cfg.panelW / cfg.panelH;
+        p.material.uniforms.uDepthNear.value = cfg.cameraZ * 0.55;
+        p.material.uniforms.uDepthFar.value = cfg.cameraZ * 1.9;
+      }
+    }
+    place(layoutMix);
+  }
+  function rebuild() {
+    for (var i = 0; i < panels.length; i++) { var m = panels[i]; if (m.geometry) m.geometry.dispose(); if (m.material) m.material.dispose(); }
+    panels = []; groups = [];
+    if (scene) scene.clear();
+    build();
+  }
+  function toNDC(e) {
+    var r = canvas.getBoundingClientRect();
+    return new THREE.Vector2(((e.clientX - r.left) / r.width) * 2 - 1, -((e.clientY - r.top) / r.height) * 2 + 1);
+  }
+  function raycast(ndc) {
+    raycaster.setFromCamera(ndc, camera);
+    return raycaster.intersectObjects(panels, false);
+  }
+  function onMove(e) {
+    var r = canvas.getBoundingClientRect();
+    pointer.x = (e.clientX - r.left) / r.width * 2 - 1;
+    pointer.y = -((e.clientY - r.top) / r.height) * 2 + 1;
+    pointer.has = true;
+    if (!started) return;
+    var hits = raycast(new THREE.Vector2(pointer.x, pointer.y));
+    var obj = hits.length ? hits[0].object : null;
+    if (obj !== hovered) {
+      hovered = obj;
+      canvas.style.cursor = obj ? 'pointer' : '';
+    }
+  }
+  function onLeave() { pointer.has = false; if (hovered) { hovered = null; canvas.style.cursor = ''; } }
+  function openRingLightbox(i) {
+    var files = window.LG_RING_FILES || [];
+    if (!files.length || !window.lightbox) return;
+    var n = files.length;
+    window.lbList = files.map(function (f, k) { return { d: { file: f, ring: true }, i: k }; });
+    window.lbIndex = ((i % n) + n) % n;
+    if (window.renderLightbox) window.renderLightbox();
+    window.lightbox.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function onClick(e) {
+    if (!started || !visible) return;
+    var hits = raycast(toNDC(e));
+    if (!hits.length) return;
+    var idx = hits[0].object.userData.ringIndex;
+    if (typeof idx !== 'number') return;
+    openRingLightbox(idx);
+  }
+  function onWheel(e) {
+    if (!visible || !started || reduced) return;
+    rotVel += e.deltaY * 0.0045;
+    driftVel += e.deltaY * 0.0011;
+    if (rotVel > 3.2) rotVel = 3.2; else if (rotVel < -3.2) rotVel = -3.2;
+    if (driftVel > 2.2) driftVel = 2.2; else if (driftVel < -2.2) driftVel = -2.2;
+  }
+  function easeOutCubic(t) { return 1 - Math.pow(1 - t, 3); }
+  function damp(a, b, k, dt) { return a + (b - a) * (1 - Math.exp(-k * dt)); }
+  function loop(now) {
+    loopFrames++;
+    if (failed) return;
+    if (!started) { requestAnimationFrame(loop); return; }
+    var dt = Math.min((now - last) / 1000, 0.05);
+    last = now;
+    clock += dt;
+    // entrance trigger
+    if (!entranceReady) {
+      var ready = texLoaded + texFailed >= Math.min(texTotal, Math.max(12, Math.ceil(texTotal * 0.6)));
+      var pl = document.getElementById('preloader');
+      var plDone = !pl || pl.classList.contains('done');
+      if (plDone && ready) entranceReady = true;
+      if (clock > 6) entranceReady = true;
+    }
+    if (entranceReady && entranceBegin < 0) entranceBegin = now;
+    if (reduced) {
+      // static, no idle spin / wheel
+    } else {
+      // inertia
+      rotVel *= Math.pow(0.90, dt * 60);
+      driftVel *= Math.pow(0.90, dt * 60);
+      rotOffset += rotVel * dt;
+      drift += driftVel * dt;
+      // layout interpolation
+      layoutMix += (layoutTarget - layoutMix) * (1 - Math.exp(-3.4 * dt));
+      if (Math.abs(layoutMix - layoutTarget) < 0.0002) layoutMix = layoutTarget;
+      place(layoutMix);
+      // bend from velocities (smoothed)
+      var tBendH = Math.max(-0.30, Math.min(0.30, rotVel * 0.11));
+      var tBendV = Math.max(-0.18, Math.min(0.18, driftVel * 0.11));
+      bendH = damp(bendH, tBendH, 6, dt);
+      bendV = damp(bendV, tBendV, 6, dt);
+      // camera parallax
+      camX = damp(camX, pointer.has ? pointer.x * 0.9 : 0, 3, dt);
+      camY = damp(camY, pointer.has ? -pointer.y * 0.45 : 0, 3, dt);
+      camera.position.x = camX;
+      camera.position.y = camY;
+      camera.lookAt(0, 0, 0);
+    }
+    // group transforms: spin + drift with wrap
+    var totalH = cfg.rows * cfg.rowSpacing;
+    var spin = rotOffset + (reduced ? 0 : clock * 0.05);
+    for (var r = 0; r < groups.length; r++) {
+      var baseY = (r - (cfg.rows - 1) / 2) * cfg.rowSpacing + cfg.cy + (reduced ? 0 : drift);
+      var wrapH = totalH / 2 + cfg.rowSpacing;
+      while (baseY > wrapH) baseY -= totalH;
+      while (baseY < -wrapH) baseY += totalH;
+      groups[r].position.y = baseY;
+      groups[r].rotation.y = spin;
+    }
+    // entrance + per-panel uniforms
+    var allDone = true;
+    for (var i = 0; i < panels.length; i++) {
+      var p = panels[i], u = p.userData, mat = p.material;
+      if (!mat.uniforms) continue;
+      var un = mat.uniforms;
+      if (entranceBegin > 0 && !u.entranceDone) {
+        var el = now - entranceBegin - u.entranceDelay;
+        if (el > 0) {
+          var s = easeOutCubic(Math.min(1, el / 820));
+          un.uOpacity.value = s;
+          un.uBlur.value = 0.14 * (1 - s);
+          if (s >= 1) { u.entranceDone = true; un.uBlur.value = 0; }
+        } else { allDone = false; }
+      } else if (!u.entranceDone && entranceBegin < 0) {
+        un.uOpacity.value = 0;
+        allDone = false;
+      }
+      // hover
+      var target = (p === hovered && !reduced) ? 1 : 0;
+      var hv = un.uHover.value;
+      un.uHover.value = hv + (target - hv) * (1 - Math.exp(-9 * dt));
+      if (!reduced) {
+        un.uTime.value = clock;
+        un.uBendH.value = bendH;
+        un.uBendV.value = bendV;
+      }
+      if (u.entranceDone && un.uOpacity.value !== 1) un.uOpacity.value = 1;
+      if (!u.entranceDone) allDone = false;
+    }
+    try {
+      if (visible) renderer.render(scene, camera);
+      if (visible && !displayChecked && entranceBegin > 0 && now - entranceBegin > 5000 && texLoaded >= texTotal) {
+        displayChecked = true;
+        try {
+          var glchk = renderer.getContext();
+          var pw = glchk.drawingBufferWidth, ph = glchk.drawingBufferHeight;
+          var lit = 0, tot = 0, pxc = new Uint8Array(4);
+          for (var si = 0; si < 40; si++) {
+            var sx = Math.floor(pw * (0.22 + 0.56 * (((si * 37 + 11) % 100) / 100)));
+            var sy = Math.floor(ph * (0.18 + 0.64 * (((si * 53 + 7) % 100) / 100)));
+            try { glchk.readPixels(sx, sy, 1, 1, glchk.RGBA, glchk.UNSIGNED_BYTE, pxc); } catch (e4) { continue; }
+            tot++; if (pxc[0] + pxc[1] + pxc[2] > 24) lit++;
+          }
+          if (tot > 0 && lit < 3) { fail(); return; }
+        } catch (e3) { /* unreadable: assume OK */ }
+      }
+    } catch (e) { lastErr = String(e); fail(); return; }
+    if (allDone && !window.__lgRingEntranceDone) { window.__lgRingEntranceDone = true; }
+    requestAnimationFrame(loop);
+  }
+  function init() {
+    try {
+      renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true, alpha: true, powerPreference: 'default', failIfMajorPerformanceCaveat: false });
+    } catch (e) { renderer = null; }
+    if (renderer) {
+      try { var gl0 = renderer.getContext(); if (!gl0) renderer = null; } catch (e3) { renderer = null; }
+    }
+    if (!renderer && THREE.WebGL1Renderer) {
+      try {
+        renderer = new THREE.WebGL1Renderer({ canvas: canvas, antialias: true, alpha: true });
+        var gl1 = renderer.getContext(); if (!gl1) renderer = null;
+      } catch (e4) { renderer = null; }
+    }
+    if (!renderer) return false;
+    var gl = renderer.getContext();
+    if (!gl) return false;
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.5));
+    renderer.outputColorSpace = THREE.SRGBColorSpace;
+    renderer.setClearColor(0x000000, 0);
+    build();
+    started = true;
+    var r2d = document.getElementById('ring2d');
+    if (r2d) r2d.style.display = 'none';
+    canvas.classList.add('is-on');
+    document.getElementById('layoutSwitch') && document.getElementById('layoutSwitch').classList.add('is-on');
+    window.__lgRingOn = true;
+    var laser = document.getElementById('laserCanvas');
+    if (laser) laser.style.display = 'none';
+    return true;
+  }
+  function fail() {
+    if (failed) return;
+    failed = true;
+    canvas.style.display = 'none';
+    var reason = 'init';
+    try { var tc = document.createElement('canvas'); reason = (tc.getContext('webgl2') || tc.getContext('webgl')) ? 'init-fail' : 'no-webgl'; } catch (e) { reason = 'gl-error'; }
+    var d = document.getElementById('lgDiag');
+    if (!d) { d = document.createElement('div'); d.id = 'lgDiag'; document.body.appendChild(d); }
+    d.textContent = 'RING3D:' + reason;
+    d.style.cssText = 'position:fixed;left:14px;bottom:14px;z-index:999;font:10px monospace;color:rgba(230,189,124,.55);letter-spacing:2px;pointer-events:none';
+    if (!start2DFallback()) { showFallback(); }
+  }
+  function showFallback() {
+    var fb = document.getElementById('heroFallback');
+    if (!fb || fb.childNodes.length) return;
+    var pool = window.WORKS || [];
+    var arr = pool.slice();
+    for (var k = arr.length - 1; k > 0; k--) { var j = (Math.random() * (k + 1)) | 0; var t = arr[k]; arr[k] = arr[j]; arr[j] = t; }
+    arr.slice(0, 9).forEach(function (it) {
+      var img = document.createElement('img');
+      img.src = 'assets/img/' + it.file;
+      img.alt = '';
+      img.loading = 'lazy';
+      img.decoding = 'async';
+      fb.appendChild(img);
+    });
+    fb.classList.add('show');
+  }
+  function start2DFallback() {
+    var host = document.getElementById('heroBg');
+    if (!host) return false;
+    if (host.querySelector('#ring2d')) return true;
+    var files = (window.LG_RING_FILES || []).slice(0, 46);
+    var worksFiles = (window.WORKS || []).map(function (w) { return w.file; });
+    var useWorks = !files.length;
+    var srcs = useWorks ? worksFiles.slice(0, 46) : files;
+    if (!srcs.length) return false;
+    var cv = document.createElement('canvas');
+    cv.id = 'ring2d';
+    host.appendChild(cv);
+    var ctx = cv.getContext('2d');
+    if (!ctx) { cv.parentNode.removeChild(cv); return false; }
+    var imgs = [], loaded = 0;
+    var W = 0, H = 0, dpr = Math.min(window.devicePixelRatio || 1, 1.5);
+    function resize() {
+      W = window.innerWidth; H = window.innerHeight;
+      cv.width = Math.round(W * dpr); cv.height = Math.round(H * dpr);
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    }
+    resize();
+    window.addEventListener('resize', resize, { passive: true });
+    srcs.forEach(function (f, idx) {
+      var im = new Image();
+      im.onload = function () { loaded++; };
+      im.onerror = function () {
+        if (!useWorks) {
+          var wf = worksFiles[idx % worksFiles.length];
+          if (wf) { im.src = 'assets/img/thumb/' + wf; return; }
+        }
+        loaded++;
+      };
+      im.src = useWorks ? ('assets/img/thumb/' + f) : ('assets/img/ring/thumb/' + f);
+      imgs.push(im);
+    });
+    var ang = 0, mx = 0.5, my = 0.5, tx = 0, ty = 0, raf = null, last = performance.now();
+    window.addEventListener('mousemove', function (e) { mx = e.clientX / W; my = e.clientY / H; }, { passive: true });
+    function frame(ts) {
+      raf = requestAnimationFrame(frame);
+      var dt = Math.min((ts - last) / 1000, 0.05); last = ts;
+      ang += dt * 0.16;
+      tx += (mx - 0.5 - tx) * 0.04; ty += (my - 0.5 - ty) * 0.04;
+      ctx.clearRect(0, 0, W, H);
+      var cx = W / 2 + tx * 70, cy = H * 0.46 + ty * 36;
+      var R = Math.min(W, H) * 0.44;
+      var N = imgs.length, items = [];
+      for (var i = 0; i < N; i++) {
+        var a = ang + i / N * Math.PI * 2;
+        var z = Math.cos(a), x = Math.sin(a);
+        var depth = (z + 1) / 2;
+        var px = cx + x * R;
+        var py = cy + (0.5 - depth) * R * 0.34;
+        var s = 0.34 + depth * 0.72;
+        items.push({ px: px, py: py, w: 128 * s, h: 172 * s, z: z, s: s, i: i });
+      }
+      items.sort(function (a, b) { return a.z - b.z; });
+      for (var k = 0; k < items.length; k++) {
+        var it = items[k];
+        ctx.save();
+        ctx.globalAlpha = 0.3 + 0.7 * it.s;
+        var im = imgs[it.i];
+        if (im && im.complete && im.naturalWidth > 0) {
+          ctx.drawImage(im, it.px - it.w / 2, it.py - it.h / 2, it.w, it.h);
+        } else {
+          ctx.fillStyle = 'rgba(217,167,91,.28)';
+          ctx.fillRect(it.px - it.w / 2, it.py - it.h / 2, it.w, it.h);
+        }
+        ctx.restore();
+      }
+    }
+    raf = requestAnimationFrame(frame);
+    window.__ring2dOn = true;
+    return true;
+  }
+
+  function boot() {
+    if (failed) return;
+    if (!init()) { fail(); return; }
+    window.addEventListener('resize', function () { clearTimeout(boot._rt); boot._rt = setTimeout(resize, 160); });
+    canvas.addEventListener('mousemove', onMove);
+    canvas.addEventListener('mouseleave', onLeave);
+    canvas.addEventListener('click', onClick);
+    window.addEventListener('wheel', onWheel, { passive: true });
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function (es) {
+        es.forEach(function (en) { visible = en.isIntersecting; });
+      }, { threshold: 0 });
+      io.observe(canvas);
+    }
+    document.addEventListener('visibilitychange', function () {
+      if (!document.hidden) last = performance.now();
+    });
+    // layout switch
+    var sw = document.getElementById('layoutSwitch');
+    if (sw) {
+      sw.addEventListener('click', function (e) {
+        var btn = e.target.closest('button[data-mode]');
+        if (!btn) return;
+        var mode = btn.getAttribute('data-mode');
+        sw.classList.toggle('is-spiral', mode === 'spiral');
+        var btns = sw.querySelectorAll('button[data-mode]');
+        for (var i = 0; i < btns.length; i++) { btns[i].classList.toggle('is-active', btns[i] === btn); btns[i].setAttribute('aria-pressed', String(btns[i] === btn)); }
+        layoutTarget = (mode === 'spiral') ? 1 : 0;
+      });
+    }
+    last = performance.now();
+    requestAnimationFrame(loop);    window.__ringStats = function(){ return { started: started, panels: panels.length, texLoaded: texLoaded, entranceReady: entranceReady, entranceDone: !!window.__lgRingEntranceDone, layoutTarget: layoutTarget, layoutMix: +layoutMix.toFixed(3) }; };
+  }
+  function waitThree() {
+    if (window.THREE) { THREE = window.THREE; boot(); return; }
+    var tries = 0;
+    var timer = setInterval(function () {
+      tries++;
+      if (window.THREE) { clearInterval(timer); THREE = window.THREE; boot(); return; }
+      if (tries >= 60) { clearInterval(timer); fail(); }
+    }, 100);
+  }
+  waitThree();
+})();
+</script>
+</body>
+</html>
